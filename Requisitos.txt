@@ -1,0 +1,9 @@
+1 - Criar controler filme
+2 - Criar model filme
+	2.1 - Todo novo filme vindo da api deve ser salvo no banco de dados.
+3 - Criar filmes locais, consultar filmes localmente no DB.
+	3.1 - Os filmes poderam ser editados, excluidos ou adicionados caso ainda não tenha sido adicionado.
+4 - Inplementar filtros, Tudo, filmes, seriados e pessoas.
+5 - Abrir modal com mais informações do filmes.
+6 - Criar aba favoritos.
+7 - historico de busca.
