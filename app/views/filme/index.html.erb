@@ -1,0 +1,60 @@
+<!-- Campo de busca -->
+<div class="container mt-3">
+	<%= form_with( url: filme_buscar_filme_path, method: :post, local: false, :html => { :id => "id_evento" }) do  |form|%>
+	<div class="container-input">
+		<input class="form-control" type="text" name="nome" placeholder="Avengers">
+		<i class="bi bi-search"></i>
+	</div>
+	<button class="btn btn-block btn-primary">Buscar</button>
+	<% end %>
+</div>
+
+
+<!-- container com os resultados -->
+<div class="container mt-3">
+
+	<div class="row gx-0 col-12 d-flex justify-content-between">
+		<!-- Begin Sidebar -->
+		<div class="list-group col-12 col-md-2">
+
+			<a href="#" class="border-bottom-0 list-group-item list-group-item-action text-white p-3" style="background-color: #00BFFF ;" aria-current="true">
+				    Resultado da Busca
+			</a>
+			<a href="#" class="border-bottom-0 list-group-item list-group-item-action d-flex justify-content-between">
+				  	<strong>Filmes</strong> <span class="badge text-dark bg-light ">14</span>
+			</a>
+			<a href="#" class="border-bottom-0 list-group-item list-group-item-action d-flex justify-content-between">
+				  	<strong>Séries</strong> <span class="badge bg-light text-dark">1</span> 
+			</a>
+			<a href="#" class="border-bottom-0 list-group-item list-group-item-action d-flex justify-content-between">
+				  	<strong>Pessoas</strong> <span class="badge bg-light text-dark">1</span> 
+			</a>
+			<a href="#" class="border-bottom-0 list-group-item list-group-item-action d-flex justify-content-between">
+				  	<strong>Coletânes</strong> <span class="badge bg-light text-dark">1</span> 
+			</a>
+			<a href="#" class="border-bottom-0 list-group-item list-group-item-action d-flex justify-content-between">
+				  	<strong>Palavras-chave</strong> <span class="badge bg-light text-dark">4</span> 
+			</a>
+			<a href="#" class="border-bottom-0 list-group-item list-group-item-action d-flex justify-content-between">
+				  	<strong>Produtoras</strong> <span class="badge bg-light text-dark">3</span> 
+			</a>
+			<a href="#" class="list-group-item list-group-item-action d-flex justify-content-between">
+				  	<strong>Emissoras</strong> <span class="badge bg-light text-dark">2</span> 
+			</a>
+		</div>
+			<!-- End Sidebar -->
+			
+
+			<div id="result" class="col-md-9">
+				<!--Spinner -->
+					<div id="result" style="border: 1px solid black; ">
+						<div id="spinner" class="spinner-border desativar" role="status">
+					  	<span class="visually-hidden"></span>
+						</div>
+					</div>
+
+			<!--  Aqui é carregado os itens da lista-->
+			</div>
+
+	</div>
+</div>

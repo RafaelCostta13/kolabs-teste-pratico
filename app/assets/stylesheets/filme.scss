@@ -1,3 +1,35 @@
 // Place all the styles related to the filme controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.container-img {
+	height: 100%;
+}
+
+.img {
+	max-height: 150px !important;
+}
+
+/* Input pesquisa */
+.input-pesquisa {
+}
+.input-pesquisa::before {
+	content: " ";
+	width: 5px;
+	height: 5px;
+	left: 0px;
+	background-color: red ;
+}
+
+/* Configuração input e Icon */
+.container-input {
+	position: relative;
+}
+.container-input input[type=text]{
+	padding-left: 40px;
+}
+.container-input i {
+	position: absolute;
+	left: 10px;
+	top: 8px;
+}

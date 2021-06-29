@@ -7,3 +7,24 @@
 5 - Abrir modal com mais informações do filmes.
 6 - Criar aba favoritos.
 7 - historico de busca.
+
+
+
+Class filme
+
+Atributos :
+	id: id_filme
+	original_title: Nome do filme
+	overview: Descrição do filme
+	poster_path: imagem de capa
+	release_date: data do filme
+
+
+
+	----------------- Escrvendo commits --------------------
+	    Feature – Quando é desenvolvimento de uma nova funcionalidade.
+    Fix – Quando se trata de uma correção de bug.
+    Docs – Quando se trata somente de uma alteração na documentação, como uma atualização no README.
+    Style – Quando mudo somente folhas de estilo.
+    Refactor – Quando refatoro completamente um trecho de código.
+    Test – Quando o foram escritos ou corrigidos somente testes.
