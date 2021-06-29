@@ -33,3 +33,25 @@
 	left: 10px;
 	top: 8px;
 }
+
+/* Spinner */
+.spinner {
+	margin-top: 30%;
+	margin-left: 40%;
+}
+.ativar {
+	display: block !important;
+}
+.desativar {
+	display: none !important;
+}
+
+/* Card */
+.card-text {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	max-heigth: 60px;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+}

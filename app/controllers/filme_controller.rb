@@ -12,13 +12,38 @@ class FilmeController < ApplicationController
 	end
 
 	def buscar_filme
-	@dados = InterfaceApi::buscar(params[:nome])		
-	respond_to do |format|
-		format.html{redirect_to '/'}
-		format.js
-	end 
+		@filmes = InterfaceApi::buscar_filmes(params[:nome])
+		@series = InterfaceApi::buscar_series(params[:nome])
+		@coletaneas = InterfaceApi::buscar_coletaneas(params[:nome])
+		@pessoas = InterfaceApi::buscar_pessoas(params[:nome])
+		@palavra_chave = InterfaceApi::buscar_palavra_chave(params[:nome])
+		@produtoras = InterfaceApi::buscar_produtoras(params[:nome])
+
+		@termo_busca = params[:nome]
+		respond_to do |format|
+			format.html{redirect_to '/'}
+			format.js
+		end
+		
+		@count_filmes = @filmes.length 
+
+		return @filmes, @count_filmes, @series, @coletaneas, @pessoas, @palavra_chave, @produtoras, @termo_busca
 	end
 
+
+	def buscar_series
+		@series = InterfaceApi::buscar_series(params[:nome])
+		respond_to do |format|
+			format.html{redirect_to '/'}
+			format.js
+		end
+	end
+
+	def buscar_pessoas
+		@pessoas = InterfaceApi::buscar_pessoas(params[:nome])
+		respond_to do |format|
+			format.html{redirect_to '/'}
+			format.js
+		end
+	end
 end
-#@dados = RestClient.get(url)
-#@dados = JSON.parse(@dados.body)["results"]
