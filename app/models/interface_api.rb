@@ -47,4 +47,10 @@ class InterfaceApi < ApplicationRecord
 		type = "company"
 		@produtoras = self.buscar(query, type)
 	end
+
+	def self.detalhes_item(id)
+		url = "https://api.themoviedb.org/3/movie/#{id}?" + API_KEY + "&" + LANGUAGE
+		dados = RestClient.get(url)
+		dados = JSON.parse(dados)
+	end
 end

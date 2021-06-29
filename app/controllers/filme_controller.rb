@@ -30,20 +30,4 @@ class FilmeController < ApplicationController
 		return @filmes, @count_filmes, @series, @coletaneas, @pessoas, @palavra_chave, @produtoras, @termo_busca
 	end
 
-
-	def buscar_series
-		@series = InterfaceApi::buscar_series(params[:nome])
-		respond_to do |format|
-			format.html{redirect_to '/'}
-			format.js
-		end
-	end
-
-	def buscar_pessoas
-		@pessoas = InterfaceApi::buscar_pessoas(params[:nome])
-		respond_to do |format|
-			format.html{redirect_to '/'}
-			format.js
-		end
-	end
 end
