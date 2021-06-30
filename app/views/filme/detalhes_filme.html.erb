@@ -1,0 +1,12 @@
+<div class="container d-flex justify-content-between mt-3">
+	<div class="container-img col-4">
+		<img class="d-img" src="<%= 'https://image.tmdb.org/t/p/w500/' + "#{@filme['poster_path']}"  %>">
+	</div>
+	<div class="col-7">
+		<h1><%= @filme['title'] %></h1>
+		<p class=""><%= @filme['release_date'] %></p>
+		<p><%= @filme['overview'] %></p>
+	</div>
+</div>
+
+	

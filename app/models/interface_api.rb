@@ -1,4 +1,4 @@
-class InterfaceApi < ApplicationRecord
+	class InterfaceApi < ApplicationRecord
 	require 'json'
 	require 'rest-client'
 	

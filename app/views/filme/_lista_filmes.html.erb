@@ -10,7 +10,7 @@
 				  <h5 class="mb-0"><%= filme['original_title'] %></h5>
 				  <p class="mb-0"><%= filme['release_date']%></p>
 				  <p class="mb-0 card-text"><%=  filme['overview']%></p>
-				  <a href="#" class="stretched-link" style="font-size: 0px;"></a>
+				  <a href="<%= "/detalhes/#{filme['id']}" %>" class="stretched-link" style="font-size: 0px;"></a>
 				</div>
 		</div>
 		<% end %>

@@ -1,11 +1,6 @@
 class FilmeController < ApplicationController
 	layout 'application'
 
-	# Endpoint API - Buscar filme atravez de uma frase
-	# https://api.themoviedb.org/3/search/movie?api_key=e2e6c0526e3737f2381684d2fd63d354&language=pt-BR&query=madagascar&page=1&include_adult=false
-
-	# Base url img
-	# https://image.tmdb.org/t/p/w500/<< poster_path >>	
 
 	def index
 			
@@ -27,7 +22,29 @@ class FilmeController < ApplicationController
 		
 		@count_filmes = @filmes.length 
 
+		salvar_novos_resultados(@filmes)
+
 		return @filmes, @count_filmes, @series, @coletaneas, @pessoas, @palavra_chave, @produtoras, @termo_busca
+	end
+
+	def detalhes_filme
+		@filme = InterfaceApi::detalhes_item(params[:id])
+	end
+
+private
+
+	def salvar_novos_resultados(filmes)
+		filmes.each do |filme|
+
+			fil = Filme.new
+			fil.id_filme = filme['id']
+			fil.original_title = filme['original_title']
+			fil.overview = filme['overview']
+			fil.poster_path = "https://image.tmdb.org/t/p/w500/" + filme['poster_path']
+			fil.release = filmes['release_date']
+		
+			fil.save
+		end
 	end
 
 end
