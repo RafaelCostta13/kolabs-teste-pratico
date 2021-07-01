@@ -1,0 +1,52 @@
+<div class="container d-flex justify-content-between mt-3">
+	<div class="container-img col-4">
+		<img class="d-img" src="<%= 'https://image.tmdb.org/t/p/w500/' + "#{@filme['poster_path']}"  %>">
+	</div>
+	<div class="col-7">
+		<h1><%= @filme['original_title'] %></h1>
+		<p class=""><%= @filme['release_date'] %></p>
+		<p><%= @filme['overview'] %></p>
+	
+		<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+			Editar
+		</button>
+      	<%= link_to "Excluir", "/excluir/#{@filme.id}",
+                  method: :delete,
+                  data: { confirm: "Tem certeza que deseja excluir esse título do seus registros locais ?" },
+                  class: 'btn btn-danger' %>
+	</div>
+</div>
+
+<%= render 'flash' %>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Editar</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <%= form_with url: "/editar/#{@filme.id}", method: :patch, local: true do |f| %>
+        	<input type="hidden" name="filme[id]" value="<%= @filme.id %>">
+        	<div class="form-group">
+        		<label for="original_title">Nome do filme</label>
+        		<input class="form-control" type="text" name="filme[original_title]" value="<%= @filme.original_title %>">
+        	</div>
+        	<div class="form-group">
+        		<label for="release_date">Release Date</label>
+        		<input class="form-control" type="date" name="filme[release_date]" value="<%= @filme.release_date %>">
+        	</div>
+        	<div class="form-group">
+        		<label for="overview">Descrição</label>
+        		<textarea class="form-control" rows="5" name="filme[overview]"><%= @filme.overview %></textarea>
+        	</div>
+      </div>
+      <div class="modal-footer">
+      	<input class="btn btn-primary" type="submit" name="submit" value="Salvar alterações">
+      	<% end %>
+      </div>
+    </div>
+  </div>
+</div>

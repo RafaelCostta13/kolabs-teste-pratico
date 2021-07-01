@@ -86,7 +86,45 @@ class FilmeController < ApplicationController
 		@coletanea = InterfaceApi::detalhes_item(params[:id], "collection")
 	end
 
+	def filmes_locais
+		@filmes = Filme.limit(20)
+		respond_to do |format|
+			format.html{redirect_to '/'}
+			format.js
+		end
+	end
+
+	def detalhes_filmes_locais
+		@filme = Filme.find(params[:id])
+	end
+
+	def editar
+		@filme = Filme.find(params[:id])
+		if @filme.update(permit_params)
+			flash[:success] = "Alteração realizada com sucesso ! ;)"
+		else
+			flash[:fail] = "Erro ao salvar as alterações no banco de dados :("
+		end
+		redirect_to "/detalhes/filmes_locais/#{params[:id]}"
+	end
+
+	def destroy
+		filme = Filme.find(params[:id])
+		if filme.destroy
+			flash[:success] = "Filme Excluido com sucesso ! huhulll. Já são 03:00 hrs da manhã e eu estou aqui ainda !"
+		else
+			flash[:fail] = "Ops ! ocorreu algum erro al excluir :("
+		end
+
+		redirect_to filmes_locais_path
+	end
+
+
 private
+
+	def permit_params
+		params.require(:filme).permit(:id, :original_title, :overview, :release_date )
+	end
 
 	def salvar_novos_resultados(filmes)
 		f = Filme.new

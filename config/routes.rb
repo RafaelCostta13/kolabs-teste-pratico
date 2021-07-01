@@ -5,6 +5,11 @@ Rails.application.routes.draw do
   get 'detalhes/filme/:id', to: "filme#detalhes_filme"
   get 'detalhes/serie/:id', to: "filme#detalhes_serie"
   get 'detalhes/coletanea/:id', to: "filme#detalhes_coletaneas"
+  get 'filmes_locais', to: "filme#filmes_locais"
+  get 'detalhes/filmes_locais/:id', to: "filme#detalhes_filmes_locais"
+  patch 'editar/:id', to: "filme#editar"
+  delete 'excluir/:id', to: "filme#destroy"
+  
 
   get 'series/:nome', to: "filme#filtro_serie"
   get 'filmes/:nome', to: "filme#filtro_filme"
