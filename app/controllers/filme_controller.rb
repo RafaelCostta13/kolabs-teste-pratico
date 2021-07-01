@@ -34,17 +34,20 @@ class FilmeController < ApplicationController
 private
 
 	def salvar_novos_resultados(filmes)
+		f = Filme.new
 		filmes.each do |filme|
-
-			fil = Filme.new
-			fil.id_filme = filme['id']
-			fil.original_title = filme['original_title']
-			fil.overview = filme['overview']
-			fil.poster_path = "https://image.tmdb.org/t/p/w500/" + filme['poster_path']
-			fil.release = filmes['release_date']
-		
-			fil.save
+			unless f.existe_no_banco?(filme['id'])
+				f.salvar_novos(filme['id'],
+							   filme['original_title'],
+							   filme['overview'],
+							   filme['poster_path'],
+							   filme['release_date'])
+			end
 		end
 	end
+
+
+
+	
 
 end

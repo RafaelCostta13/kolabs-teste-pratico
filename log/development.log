@@ -1,0 +1,1082 @@
+Started GET "/" for ::1 at 2021-06-30 18:43:14 -0300
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (160.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (95.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 3 pending migrations:
+
+20210628060404_create_filmes.rb
+20210628235649_create_inteface_apis.rb
+20210630005140_add_cloumns_filmes.rb
+
+
+):
+  
+activerecord (6.1.4) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.4) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.4) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activerecord (6.1.4) lib/active_record/migration.rb:595:in `block in call'
+activerecord (6.1.4) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.4) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.2) lib/mini_profiler/profiler.rb:384:in `call'
+webpacker (5.4.0) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.1.4) lib/rails/engine.rb:539:in `call'
+puma (5.3.2) lib/puma/configuration.rb:249:in `call'
+puma (5.3.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.3.2) lib/puma/thread_pool.rb:338:in `with_force_shutdown'
+puma (5.3.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.3.2) lib/puma/server.rb:438:in `process_client'
+puma (5.3.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateFilmes (20210628060404)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "filmes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210628060404"]]
+  [1m[36mTRANSACTION (278.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateIntefaceApis (20210628235649)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "inteface_apis" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210628235649"]]
+  [1m[36mTRANSACTION (217.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddCloumnsFilmes (20210630005140)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "filmes" ADD "id_filme" integer[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "filmes" ADD "original_title" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "filmes" ADD "overview" text[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "filmes" ADD "poster_path" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "filmes" ADD "release_date" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210630005140"]]
+  [1m[36mTRANSACTION (67.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-06-30 21:43:29.918820"], ["updated_at", "2021-06-30 21:43:29.918820"]]
+  [1m[36mTRANSACTION (69.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2021-06-30 18:43:40 -0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FilmeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering filme/index.html.erb within layouts/application
+[Webpacker] Compiling...
+Started GET "/" for ::1 at 2021-06-30 18:43:42 -0300
+Processing by FilmeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering filme/index.html.erb within layouts/application
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.5
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+error Command "webpack" not found.
+
+  Rendered filme/index.html.erb within layouts/application (Duration: 2369.7ms | Allocations: 7689)
+  Rendered layout layouts/application.html.erb (Duration: 2369.8ms | Allocations: 7783)
+Completed 500 Internal Server Error in 2375ms (ActiveRecord: 0.0ms | Allocations: 11353)
+
+
+  
+ActionView::Template::Error (Webpacker can't find filme.js in /home/rafael/github/kolabs-teste-pratico/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+    1: <%= javascript_pack_tag "filme" %>
+    2: 
+    3: <!-- Campo de busca -->
+    4: <div class="container mt-3">
+  
+app/views/filme/index.html.erb:1
+[Webpacker] Compilation failed:
+yarn run v1.22.5
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+error Command "webpack" not found.
+
+  Rendered filme/index.html.erb within layouts/application (Duration: 1116.7ms | Allocations: 137393)
+  Rendered layout layouts/application.html.erb (Duration: 1117.0ms | Allocations: 137711)
+Completed 500 Internal Server Error in 1118ms (ActiveRecord: 0.0ms | Allocations: 138232)
+
+
+  
+ActionView::Template::Error (Webpacker can't find filme.js in /home/rafael/github/kolabs-teste-pratico/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+    1: <%= javascript_pack_tag "filme" %>
+    2: 
+    3: <!-- Campo de busca -->
+    4: <div class="container mt-3">
+  
+app/views/filme/index.html.erb:1
+Started GET "/" for ::1 at 2021-06-30 18:53:39 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FilmeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering filme/index.html.erb within layouts/application
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.5
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+error Command "webpack" not found.
+
+  Rendered filme/index.html.erb within layouts/application (Duration: 1109.4ms | Allocations: 4424)
+  Rendered layout layouts/application.html.erb (Duration: 1109.6ms | Allocations: 4518)
+Completed 500 Internal Server Error in 1114ms (ActiveRecord: 0.0ms | Allocations: 7785)
+
+
+  
+ActionView::Template::Error (Webpacker can't find filme.js in /home/rafael/github/kolabs-teste-pratico/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+    1: <%= javascript_pack_tag "filme" %>
+    2: 
+    3: <!-- Campo de busca -->
+    4: <div class="container mt-3">
+  
+app/views/filme/index.html.erb:1
+Started GET "/" for ::1 at 2021-06-30 18:56:35 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FilmeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering filme/index.html.erb within layouts/application
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/rafael/github/kolabs-teste-pratico/public/packs
+[Webpacker] Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+
+[Webpacker] Hash: 4687a6ae72044476856d
+Version: webpack 4.46.0
+Time: 1101ms
+Built at: 30/06/2021 18:56:38
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-e421b4aa3f716bebdab1.js    125 KiB  application  [emitted] [immutable]  application
+js/application-e421b4aa3f716bebdab1.js.map    139 KiB  application  [emitted] [dev]        application
+          js/filme-40becb6b14fe733cc9d2.js    4.2 KiB        filme  [emitted] [immutable]  filme
+      js/filme-40becb6b14fe733cc9d2.js.map   3.99 KiB        filme  [emitted] [dev]        filme
+                             manifest.json  661 bytes               [emitted]              
+Entrypoint application = js/application-e421b4aa3f716bebdab1.js js/application-e421b4aa3f716bebdab1.js.map
+Entrypoint filme = js/filme-40becb6b14fe733cc9d2.js js/filme-40becb6b14fe733cc9d2.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./app/javascript/packs/filme.js] 351 bytes {filme} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+  Rendered filme/index.html.erb within layouts/application (Duration: 2778.4ms | Allocations: 3974)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 2873.4ms | Allocations: 19357)
+Completed 200 OK in 2881ms (Views: 2875.3ms | ActiveRecord: 0.0ms | Allocations: 22615)
+
+
+Started POST "/filme/buscar_filme" for ::1 at 2021-06-30 18:56:47 -0300
+Processing by FilmeController#buscar_filme as JS
+  Parameters: {"authenticity_token"=>"[FILTERED]", "nome"=>"avengers"}
+Completed 500 Internal Server Error in 1057ms (ActiveRecord: 0.5ms | Allocations: 18103)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/filme_controller.rb:44:in `[]'
+app/controllers/filme_controller.rb:44:in `block in salvar_novos_resultados'
+app/controllers/filme_controller.rb:37:in `each'
+app/controllers/filme_controller.rb:37:in `salvar_novos_resultados'
+app/controllers/filme_controller.rb:25:in `buscar_filme'
+Started GET "/" for ::1 at 2021-06-30 18:56:59 -0300
+Processing by FilmeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering filme/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered filme/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1789)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 4752)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.0ms | Allocations: 5284)
+
+
+Started GET "/" for ::1 at 2021-06-30 18:57:37 -0300
+Processing by FilmeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering filme/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered filme/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1893)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 4884)
+Completed 200 OK in 6ms (Views: 5.2ms | Allocations: 5636)
+
+
+Started POST "/filme/buscar_filme" for ::1 at 2021-06-30 18:57:41 -0300
+Processing by FilmeController#buscar_filme as JS
+  Parameters: {"authenticity_token"=>"[FILTERED]", "nome"=>"avengers"}
+Completed 500 Internal Server Error in 5235ms (Allocations: 10712)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/filme_controller.rb:37:in `[]'
+app/controllers/filme_controller.rb:37:in `salvar_novos_resultados'
+app/controllers/filme_controller.rb:25:in `buscar_filme'
+Started GET "/" for ::1 at 2021-06-30 18:57:58 -0300
+Processing by FilmeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering filme/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered filme/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1781)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 4744)
+Completed 200 OK in 8ms (Views: 6.8ms | Allocations: 5234)
+
+
+Started GET "/" for ::1 at 2021-06-30 19:03:55 -0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FilmeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering filme/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered filme/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 2667)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 8350)
+Completed 200 OK in 13ms (Views: 9.7ms | ActiveRecord: 0.0ms | Allocations: 11709)
+
+
+Started POST "/filme/buscar_filme" for ::1 at 2021-06-30 19:04:06 -0300
+Processing by FilmeController#buscar_filme as JS
+  Parameters: {"authenticity_token"=>"[FILTERED]", "nome"=>"madagascar"}
+Completed 500 Internal Server Error in 967ms (ActiveRecord: 0.5ms | Allocations: 19220)
+
+
+  
+NoMethodError (undefined method `release=' for #<Filme id: nil, created_at: nil, updated_at: nil, id_filme: 953, original_title: "Madagascar", overview: "O leão Alex é a grande atração do zoológico do Cen...", poster_path: "https://image.tmdb.org/t/p/w500//7aoLcwd4nQVGbG7L4...", release_date: nil>
+Did you mean?  release_date=):
+  
+app/controllers/filme_controller.rb:44:in `block in salvar_novos_resultados'
+app/controllers/filme_controller.rb:37:in `each'
+app/controllers/filme_controller.rb:37:in `salvar_novos_resultados'
+app/controllers/filme_controller.rb:25:in `buscar_filme'
+Started GET "/" for ::1 at 2021-06-30 19:05:12 -0300
+Processing by FilmeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering filme/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered filme/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1893)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 4887)
+Completed 200 OK in 10ms (Views: 9.6ms | Allocations: 5644)
+
+
+Started POST "/filme/buscar_filme" for ::1 at 2021-06-30 19:05:15 -0300
+Processing by FilmeController#buscar_filme as JS
+  Parameters: {"authenticity_token"=>"[FILTERED]", "nome"=>"avengers"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/filme_controller.rb:39:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mFilme Create (2.2ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "poster_path", "release_date") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-06-30 22:05:21.125719"], ["updated_at", "2021-06-30 22:05:21.125719"], ["id_filme", 299534], ["original_title", "Avengers: Endgame"], ["overview", "Após os eventos devastadores de \"Vingadores: Guerra Infinita\", o universo está em ruínas devido aos esforços do Titã Louco, Thanos. Com a ajuda de aliados remanescentes, os Vingadores devem se reunir mais uma vez a fim de desfazer as ações de Thanos e restaurar a ordem no universo de uma vez por todas, não importando as consequências."], ["poster_path", "https://image.tmdb.org/t/p/w500//q6725aR8Zs4IwGMXzZT8aC8lh41.jpg"], ["release_date", "2019-04-24"]]
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (74.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mFilme Create (0.2ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "poster_path", "release_date") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-06-30 22:05:21.209290"], ["updated_at", "2021-06-30 22:05:21.209290"], ["id_filme", 299536], ["original_title", "Avengers: Infinity War"], ["overview", "Homem de Ferro, Thor, Hulk e os Vingadores se unem para combater seu inimigo mais poderoso, o maligno Thanos. Em uma missão para coletar todas as seis pedras infinitas, Thanos planeja usá-las para infligir sua vontade maléfica sobre a realidade."], ["poster_path", "https://image.tmdb.org/t/p/w500//89QTZmn34iwXYeCpVxhC9UrT8sX.jpg"], ["release_date", "2018-04-25"]]
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (117.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mFilme Create (0.2ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "poster_path", "release_date") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-06-30 22:05:21.333369"], ["updated_at", "2021-06-30 22:05:21.333369"], ["id_filme", 24428], ["original_title", "The Avengers"], ["overview", "Loki, o irmão de Thor, ganha acesso ao poder ilimitado do cubo cósmico ao roubá-lo de dentro das instalações da S.H.I.E.L.D. Nick Fury, o diretor desta agência internacional que mantém a paz, logo reúne os únicos super-heróis que serão capazes de defender a Terra de ameaças sem precedentes. Homem de Ferro, Capitão América, Hulk, Thor, Viúva Negra e Gavião Arqueiro formam o time dos sonhos de Fury, mas eles precisam aprender a colocar os egos de lado e agir como um grupo em prol da humanidade."], ["poster_path", "https://image.tmdb.org/t/p/w500//u49fzmIJHkb1H4oGFTXtBGgaUS1.jpg"], ["release_date", "2012-04-25"]]
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (93.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mFilme Create (0.2ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "poster_path", "release_date") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-06-30 22:05:21.432122"], ["updated_at", "2021-06-30 22:05:21.432122"], ["id_filme", 99861], ["original_title", "Avengers: Age of Ultron"], ["overview", "Ao tentar proteger o planeta de ameaças, Tony Stark constrói um sistema de inteligência artificial que cuidaria da paz mundial. O projeto acaba dando errado e gera o nascimento do Ultron. Com o destino da Terra em jogo, os Vingadores terão que se unir para mais uma vez salvar a raça humana da extinção."], ["poster_path", "https://image.tmdb.org/t/p/w500//vGIIl89vglo66yUfbuTxzNAs4y5.jpg"], ["release_date", "2015-04-22"]]
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (126.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mFilme Create (0.2ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "poster_path", "release_date") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-06-30 22:05:21.565333"], ["updated_at", "2021-06-30 22:05:21.565333"], ["id_filme", 323660], ["original_title", "Avengers Grimm"], ["overview", "Quando Rumpelstiltskin destrói o espelho mágico e foge para o mundo moderno, as quatro princesas de \"Once Upon a Time\" -Cinderella, Bela Adormecida, Branca de Neve, Rapunzel e-são sugados através do portal também. Bem treinado e dotado de poderes mágicos, as quatro mulheres devem lutar Rumpelstiltskin e seu exército de escravos antes que ele escraviza todos na Terra."], ["poster_path", "https://image.tmdb.org/t/p/w500//b6eLRanmkrffTOSL0dHVaqlvtdr.jpg"], ["release_date", "2015-03-17"]]
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (70.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mFilme Create (0.2ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "poster_path", "release_date") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-06-30 22:05:21.643367"], ["updated_at", "2021-06-30 22:05:21.643367"], ["id_filme", 9320], ["original_title", "The Avengers"], ["overview", "O espião John Steed foi chamado pelo Ministério, uma agência britânica ultra-secreta, para investigar alguns estranhos acontecimentos. O clima aparenta estar fora de controle, com a ocorrência de fortes tempestades de neve, chuvas de granizo e mudanças drásticas de temperatura. O maior suspeito de ser o autor destes eventos é Sir August de Wynter, um ex-membro do Ministério que é muito rico e também bizarro. Juntamente com Emma Peel, uma expert em jiu-jitsu e em meteorologia, Steed precisa eliminar a ameaça."], ["poster_path", "https://image.tmdb.org/t/p/w500//3LXsZcJcAHNtTfwnNhUbAxW49gK.jpg"], ["release_date", "1998-08-13"]]
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (71.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mFilme Create (1.3ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "poster_path", "release_date") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-06-30 22:05:21.721413"], ["updated_at", "2021-06-30 22:05:21.721413"], ["id_filme", 14611], ["original_title", "Ultimate Avengers 2"], ["overview", "Uma poderosa força alienígena está prestes a invadir a Terra. Ela está em busca de algo escondido na nação secreta de Wakanda, governada pelo príncipe T´Challa (Jeffrey D. Sams), também conhecido como Pantera Negra. Decidido a combater sua nação, ele pede a ajuda dos Supremos, um grupo formado por sete dos maiores super-heróis do planeta: Capitão América (Justin Gross), Hulk (Fred Tatasciore), Vespa (Grey DeLisle), Homem de Ferro (Marc Worden), Viúva Negra (Olivia d´Abo), Thor (David Boat) e Gigante (Nolan North)."], ["poster_path", "https://image.tmdb.org/t/p/w500//sMFyYZR9krqcQC99G6jnb10Zv4P.jpg"], ["release_date", "2006-08-08"]]
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (91.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mFilme Create (0.2ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "poster_path", "release_date") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-06-30 22:05:21.821110"], ["updated_at", "2021-06-30 22:05:21.821110"], ["id_filme", 14613], ["original_title", "Next Avengers: Heroes of Tomorrow"], ["overview", "Sempre que as forças do mal ameaçaram a humanidade, os heróis mais poderosos da Terra, os Vingadores estavam lá para detê-los, até que em uma luta final foram derrotados pelo indestrutível robô Ultron. Mas nem tudo está perdido, Tony Stark (O Homem de Ferro) manteve os filhos dos Vingadores em segurança para se tornarem os heróis adolescentes. Agora, James (filho do Capitão América e da Viúva Negra) Torunn (filha de Thor), Azari (filho da Pantera Negra), e Pym (Filho da Vespa e do Homem Gigante) devem terminar a luta que seus pais começaram. Logo o filho de Hawkeye irá se juntar a eles. Mas será que cinco adolescentes serão suficientes para destruir a máquina que derrotou seus pais? Para esta nova batalha eles vão à procura de O Incrível Hulk que terá que se unir aos jovens e então formarem “Os Heróis do Futuro”."], ["poster_path", "https://image.tmdb.org/t/p/w500//aSizHhORXh25Ltfu9VRmPtsOt1C.jpg"], ["release_date", "2008-09-02"]]
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (102.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mFilme Create (0.2ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "poster_path", "release_date") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-06-30 22:05:21.931294"], ["updated_at", "2021-06-30 22:05:21.931294"], ["id_filme", 14609], ["original_title", "Ultimate Avengers: The Movie"], ["overview", "O mundo está em crise. Antigos inimigos estão prestes a atacar. Um poderoso time é recrutado e o maior herói do planeta é chamado para liderar o time: Capitão América. Infelizmente, ele ficou congelado por mais de sessenta anos depois de um acidente durante a Segunda Guerra Mundial. Inspirada na HQ de sucesso da Marvel \"Os Supremos\", esta é a extraordinária história de seis heróis que terão de superar suas diferenças e lutar juntos para salvar o mundo. Mas eles não poderiam imaginar que a maior ameaça surgiria de dentro do próprio grupo: o Incrível Hulk!"], ["poster_path", "https://image.tmdb.org/t/p/w500//vd7GyPkDvDDfvcxgWAfkGpKiAkH.jpg"], ["release_date", "2006-02-21"]]
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (83.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mFilme Create (0.2ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "poster_path", "release_date") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-06-30 22:05:22.020149"], ["updated_at", "2021-06-30 22:05:22.020149"], ["id_filme", 347158], ["original_title", "Bikini Avengers"], ["overview", ""], ["poster_path", "https://image.tmdb.org/t/p/w500//ehTYWuPKwl8sXPX0I6LnvJUDaVl.jpg"], ["release_date", "2015-02-24"]]
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (197.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mFilme Create (1.2ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "poster_path", "release_date") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-06-30 22:05:22.222956"], ["updated_at", "2021-06-30 22:05:22.222956"], ["id_filme", 521720], ["original_title", "Avengers Grimm: Time Wars"], ["overview", ""], ["poster_path", "https://image.tmdb.org/t/p/w500//xfAcu74DRQXeM9XqFcE5MrSRzYP.jpg"], ["release_date", "2018-05-01"]]
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (279.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mFilme Create (0.2ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "poster_path", "release_date") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-06-30 22:05:22.509152"], ["updated_at", "2021-06-30 22:05:22.509152"], ["id_filme", 448366], ["original_title", "Building the Dream: Assembling the Avengers"], ["overview", ""], ["poster_path", "https://image.tmdb.org/t/p/w500//coS6rIaucxDzq20kiJozTgQ0Nmk.jpg"], ["release_date", "2012-09-25"]]
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (113.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mFilme Create (0.3ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "poster_path", "release_date") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-06-30 22:05:22.629189"], ["updated_at", "2021-06-30 22:05:22.629189"], ["id_filme", 448368], ["original_title", "The Avengers: A Visual Journey"], ["overview", ""], ["poster_path", "https://image.tmdb.org/t/p/w500//2kBT7KONKQTIhkMc2ZtPU11E8Ky.jpg"], ["release_date", "2012-09-25"]]
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (126.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mFilme Create (0.3ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "poster_path", "release_date") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-06-30 22:05:22.762785"], ["updated_at", "2021-06-30 22:05:22.762785"], ["id_filme", 368304], ["original_title", "LEGO Marvel Super Heroes: Avengers Reassembled!"], ["overview", "Quando Ultron se apodera da armadura do Homem de Ferro, os Vingadores correm contra o tempo para ajudar o amigo e evitar que o mundo caia nas mãos do inimigo."], ["poster_path", "https://image.tmdb.org/t/p/w500//xUBZNoY7idPfqKZepnDEv7Qc8GC.jpg"], ["release_date", "2015-11-16"]]
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (127.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mFilme Create (0.2ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "poster_path", "release_date") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-06-30 22:05:22.895635"], ["updated_at", "2021-06-30 22:05:22.895635"], ["id_filme", 538153], ["original_title", "Avengers of Justice: Farce Wars"], ["overview", ""], ["poster_path", "https://image.tmdb.org/t/p/w500//yymsCwKPbJIF1xcl2ih8fl7OxAa.jpg"], ["release_date", "2018-07-20"]]
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (127.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mFilme Create (0.3ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "poster_path", "release_date") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-06-30 22:05:23.029044"], ["updated_at", "2021-06-30 22:05:23.029044"], ["id_filme", 487555], ["original_title", "The Avengers: Earth's Mightiest Heroes - Prelude"], ["overview", ""], ["poster_path", "https://image.tmdb.org/t/p/w500//3o7MpOaDkeAcvxqEjgbIcXrcepB.jpg"], ["release_date", "2010-09-22"]]
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (115.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mFilme Create (0.3ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "poster_path", "release_date") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-06-30 22:05:23.151154"], ["updated_at", "2021-06-30 22:05:23.151154"], ["id_filme", 58906], ["original_title", "Alien Avengers"], ["overview", ""], ["poster_path", "https://image.tmdb.org/t/p/w500//Akd3Aqrr2q8PLKOCPOkOnB3AoJk.jpg"], ["release_date", "1996-08-03"]]
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (120.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mFilme Create (0.2ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "poster_path", "release_date") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-06-30 22:05:23.278966"], ["updated_at", "2021-06-30 22:05:23.278966"], ["id_filme", 416101], ["original_title", "Ninja Avengers"], ["overview", ""], ["poster_path", "https://image.tmdb.org/t/p/w500//acmrVRQXQKFGs6ExSVUuRys1yxv.jpg"], ["release_date", "1987-01-01"]]
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (122.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mFilme Create (0.3ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "poster_path", "release_date") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-06-30 22:05:23.406840"], ["updated_at", "2021-06-30 22:05:23.406840"], ["id_filme", 223291], ["original_title", "Alien Avengers II"], ["overview", ""], ["poster_path", "https://image.tmdb.org/t/p/w500//4L3ajGP3ZsnM8xIrXjwEZOLYBjb.jpg"], ["release_date", "1997-10-25"]]
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (162.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+Completed 500 Internal Server Error in 7695ms (ActiveRecord: 2333.0ms | Allocations: 100286)
+
+
+  
+TypeError (no implicit conversion of nil into String):
+  
+app/controllers/filme_controller.rb:43:in `+'
+app/controllers/filme_controller.rb:43:in `block in salvar_novos_resultados'
+app/controllers/filme_controller.rb:37:in `each'
+app/controllers/filme_controller.rb:37:in `salvar_novos_resultados'
+app/controllers/filme_controller.rb:25:in `buscar_filme'
+Started GET "/" for ::1 at 2021-06-30 19:06:41 -0300
+Processing by FilmeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering filme/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered filme/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1893)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 4886)
+Completed 200 OK in 5ms (Views: 4.8ms | Allocations: 5637)
+
+
+Started GET "/" for ::1 at 2021-06-30 19:07:46 -0300
+Processing by FilmeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering filme/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered filme/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1893)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 4876)
+Completed 200 OK in 6ms (Views: 5.5ms | Allocations: 5629)
+
+
+Started POST "/filme/buscar_filme" for ::1 at 2021-06-30 19:07:49 -0300
+Processing by FilmeController#buscar_filme as JS
+  Parameters: {"authenticity_token"=>"[FILTERED]", "nome"=>"madagascar'"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/filme_controller.rb:39:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mFilme Create (0.2ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "poster_path", "release_date") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-06-30 22:07:50.924357"], ["updated_at", "2021-06-30 22:07:50.924357"], ["id_filme", 953], ["original_title", "Madagascar"], ["overview", "O leão Alex é a grande atração do zoológico do Central Park, em Nova York. Ele e seus melhores amigos, a zebra Marty, a girafa Melman e a hipopótamo Gloria, sempre passaram a vida em cativeiro e desconhecem o que é morar na selva. Curioso em saber o que há por trás dos muros do zoo, Marty decide fugir e explorar o mundo. Ao perceberem, Alex, Gloria e Melman decidem partir à sua procura. O trio encontra Marty na estação Grand Central do metrô, mas antes que consigam voltar para casa são atingidos por dardos tranquilizantes e capturados. Embarcados em um navio rumo à África, eles acabam na ilha de Madagascar, onde precisam encontrar meios de sobrevivência em uma selva verdadeira."], ["poster_path", "https://image.tmdb.org/t/p/w500/7aoLcwd4nQVGbG7L4vqu0d929JD.jpg"], ["release_date", "2005-05-25"]]
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (120.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mFilme Create (0.2ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "poster_path", "release_date") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-06-30 22:07:51.050935"], ["updated_at", "2021-06-30 22:07:51.050935"], ["id_filme", 270946], ["original_title", "Penguins of Madagascar"], ["overview", "Vindos da franquia de animação Madagascar, Capitão, Kowalski, Rico e Recruta, a elite do pinguins espiões, são capturados em uma missão que tinha como objetivo presentear o integrante mais novo da tropa (Recruta) em seu aniversário. Eles caem nas garras do temido Dr. Otavius Brine, que se sentiu prejudicado pelo quarteto em um passado remoto. Agora, eles vão ter que impedir o maléfico plano do vilão de se vingar dos pinguins do mundo todo e, para isso, terão que juntar forças com uma especializada agência de espiões, a Vento do Norte, liderada pelo Agente Secreto. Enquanto isso, Recruta tenta provar seu valor como agente especial do time de pinguins."], ["poster_path", "https://image.tmdb.org/t/p/w500/w9jno0ySammISRGvc0RZREjYUvg.jpg"], ["release_date", "2014-11-22"]]
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (78.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mFilme Create (0.2ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "poster_path", "release_date") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-06-30 22:07:51.140526"], ["updated_at", "2021-06-30 22:07:51.140526"], ["id_filme", 161143], ["original_title", "Madly Madagascar"], ["overview", "O feriado favorito de Alex, Dia dos Namorados, chega repleto de surpresas hilariantes para toda a turma entrar de cabeça. Melman tem grandes planos para Gloria, Marty tenta impressionar uma nova amiga e todos querem colocar as mãos na poção mágica de amor do Rei Julien. Você vai se apaixonar por essa incrível aventura."], ["poster_path", "https://image.tmdb.org/t/p/w500/rUfOJAiI9fecyf4jpEFWJoly0l8.jpg"], ["release_date", "2013-01-29"]]
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (111.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mFilme Create (0.3ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "poster_path", "release_date") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-06-30 22:07:51.259505"], ["updated_at", "2021-06-30 22:07:51.259505"], ["id_filme", 80321], ["original_title", "Madagascar 3: Europe's Most Wanted"], ["overview", "Nossos amigos animais Alex, Marty, Glória e Melman vão para a Europa e passam a ser perseguidos por uma agente de controle de animais. Para despistá-la, eles se juntam a um grupo circense que sonha em se apresentar em Nova York, o lar dos animais."], ["poster_path", "https://image.tmdb.org/t/p/w500/bPRvFj9MGeLeqidaTniUf8yQ0PW.jpg"], ["release_date", "2012-06-06"]]
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (91.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mFilme Create (0.3ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "poster_path", "release_date") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-06-30 22:07:51.358385"], ["updated_at", "2021-06-30 22:07:51.358385"], ["id_filme", 10527], ["original_title", "Madagascar: Escape 2 Africa"], ["overview", "Alex, Marty, Melman, Gloria, Rei Julien, Maurice, os pinguins e os chimpanzés estão no longínquo litoral de Madagascar. Para deixar o local os pinguins consertam um velho avião de guerra, mas logo em seu 1º voo ele cai. Isto faz com que os animais do zoológico de Nova York tenham que lidar, pela 1ª vez na vida, com espécies semelhantes a eles, só que habituadas à vida selvagem."], ["poster_path", "https://image.tmdb.org/t/p/w500/j4If0LljCT2v6CZc86ah3kTshDw.jpg"], ["release_date", "2008-10-30"]]
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (92.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mFilme Create (0.2ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "poster_path", "release_date") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-06-30 22:07:51.457742"], ["updated_at", "2021-06-30 22:07:51.457742"], ["id_filme", 25472], ["original_title", "Merry Madagascar"], ["overview", "Merry Madagascar começa quando o Papai Noel e seu trenó inesperadamente caem na ilha, o que o deixa com amnésia. Portanto, cabe a Alex, Marty, Melman e Glória a entrega dos presentes para salvar o Natal. Merry Madagascar é o primeiro especial de Natal transmitido pela NBC no ano de 2009. Nele temos de volta os personagens do filme Madagascar e a história se passa entre o primeiro e segundo filmes."], ["poster_path", "https://image.tmdb.org/t/p/w500/s5nELMHR1L2agJXVIPiWxu6dWl8.jpg"], ["release_date", "2009-11-16"]]
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (92.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mFilme Create (0.3ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "poster_path", "release_date") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-06-30 22:07:51.558162"], ["updated_at", "2021-06-30 22:07:51.558162"], ["id_filme", 576575], ["original_title", "The Penguins of Madagascar"], ["overview", ""], ["poster_path", "https://image.tmdb.org/t/p/w500/A7xG9nPkPT4ltp2j3900ZqvzDAj.jpg"], ["release_date", "2009-03-28"]]
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (91.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mFilme Create (0.2ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "poster_path", "release_date") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-06-30 22:07:51.657932"], ["updated_at", "2021-06-30 22:07:51.657932"], ["id_filme", 240704], ["original_title", "Island of Lemurs: Madagascar"], ["overview", ""], ["poster_path", "https://image.tmdb.org/t/p/w500/v07nONcdln6PCaDaIa6BW43uEtp.jpg"], ["release_date", "2014-04-03"]]
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (93.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mFilme Create (0.3ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "poster_path", "release_date") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-06-30 22:07:51.757781"], ["updated_at", "2021-06-30 22:07:51.757781"], ["id_filme", 10258], ["original_title", "The Madagascar Penguins in a Christmas Caper"], ["overview", "Um grupo de pinguins que acredita que lidera uma força de greve de elite diretamente de seus quartéis no Central Park Zoo."], ["poster_path", "https://image.tmdb.org/t/p/w500/5FU5m9zhA3eOfWVO4DZhpn6iwLR.jpg"], ["release_date", "2005-09-23"]]
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (133.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mFilme Create (0.3ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "poster_path", "release_date") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-06-30 22:07:51.898912"], ["updated_at", "2021-06-30 22:07:51.898912"], ["id_filme", 533023], ["original_title", "Los Pingüinos de Madagascar: Operación Vacaciones"], ["overview", ""], ["poster_path", "https://image.tmdb.org/t/p/w500/qG8jn9N17IAqz6ujgNqRqnMSMJT.jpg"], ["release_date", "2012-02-14"]]
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (129.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mFilme Create (0.3ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "poster_path", "release_date") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-06-30 22:07:52.035490"], ["updated_at", "2021-06-30 22:07:52.035490"], ["id_filme", 275298], ["original_title", "The Penguins of Madagascar: Operation Antarctica"], ["overview", ""], ["poster_path", "https://image.tmdb.org/t/p/w500/z1hzMQXEKtMFFnjvCbS1f7aeAnp.jpg"], ["release_date", "2012-01-16"]]
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (104.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mFilme Create (0.2ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "poster_path", "release_date") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-06-30 22:07:52.146146"], ["updated_at", "2021-06-30 22:07:52.146146"], ["id_filme", 192729], ["original_title", "The Penguins of Madagascar – Operation: Impossible Possible"], ["overview", "Os pinguins estão de volta com mais episódios com muita ação, trapalhadas e armações. Desde uma invasão de abelhas zumbidoras até um elefante fujão, este DVD é repleto de planos e esquemas que vão deixar todo o mundo muito ocupado no zoológico."], ["poster_path", "https://image.tmdb.org/t/p/w500/dc3hCzn8DBwmcIm7cSVeZdNGwpN.jpg"], ["release_date", "2008-09-22"]]
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (104.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mFilme Create (0.2ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "release_date") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-06-30 22:07:52.257089"], ["updated_at", "2021-06-30 22:07:52.257089"], ["id_filme", 150298], ["original_title", "Madagascar, carnet de voyage"], ["overview", ""], ["release_date", "2010-01-24"]]
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (127.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mFilme Create (0.2ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "poster_path", "release_date") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-06-30 22:07:52.390455"], ["updated_at", "2021-06-30 22:07:52.390455"], ["id_filme", 263463], ["original_title", "The Penguins of Madagascar: Operation Vacation"], ["overview", ""], ["poster_path", "https://image.tmdb.org/t/p/w500/sJCNvIdFPKVK6BO2vHUaKEEHz8i.jpg"], ["release_date", "2012-02-14"]]
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (128.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mFilme Create (0.3ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "poster_path", "release_date") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-06-30 22:07:52.525436"], ["updated_at", "2021-06-30 22:07:52.525436"], ["id_filme", 311201], ["original_title", "The Penguins of Madagascar: Operation Penguin Takeover"], ["overview", ""], ["poster_path", "https://image.tmdb.org/t/p/w500/stYKQOMiAg9V4WtZwhF7GAgNTv2.jpg"], ["release_date", "2010-03-15"]]
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (91.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mFilme Create (0.2ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "poster_path", "release_date") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-06-30 22:07:52.623593"], ["updated_at", "2021-06-30 22:07:52.623593"], ["id_filme", 311057], ["original_title", "The Penguins of Madagascar: Operation Penguin Patrol"], ["overview", ""], ["poster_path", "https://image.tmdb.org/t/p/w500/xOj1U2bByrxkaV2OWKc5AgwiGUC.jpg"], ["release_date", "2011-12-14"]]
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (115.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mFilme Create (0.2ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "poster_path", "release_date") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-06-30 22:07:52.745132"], ["updated_at", "2021-06-30 22:07:52.745132"], ["id_filme", 490643], ["original_title", "Madagascar: Legends of Lemur Island"], ["overview", ""], ["poster_path", "https://image.tmdb.org/t/p/w500/l0spWHHmqNhudaTqB5u4yjdKO6E.jpg"], ["release_date", ""]]
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (93.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mFilme Create (0.2ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "poster_path", "release_date") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-06-30 22:07:52.845744"], ["updated_at", "2021-06-30 22:07:52.845744"], ["id_filme", 306806], ["original_title", "The Penguins of Madagascar: Happy King Julien Day"], ["overview", ""], ["poster_path", "https://image.tmdb.org/t/p/w500/k92k7sv382vpYDYLbZtfqbhN7kO.jpg"], ["release_date", "2010-08-19"]]
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (115.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mFilme Create (0.2ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "poster_path", "release_date") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-06-30 22:07:52.967537"], ["updated_at", "2021-06-30 22:07:52.967537"], ["id_filme", 279442], ["original_title", "The Penguins of Madagascar: The All-Nighter Before Xmas"], ["overview", ""], ["poster_path", "https://image.tmdb.org/t/p/w500/orfkKS13okaCfamt12UCpweBXMc.jpg"], ["release_date", "2011-10-11"]]
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (115.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mFilme Create (0.3ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "release_date") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-06-30 22:07:53.089622"], ["updated_at", "2021-06-30 22:07:53.089622"], ["id_filme", 389430], ["original_title", "Madagascar"], ["overview", ""], ["release_date", "1995-03-01"]]
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  [1m[36mTRANSACTION (117.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/filme_controller.rb:46:in `block in salvar_novos_resultados'
+  Rendering filme/buscar_filme.js.erb
+  Rendered filme/_lista_filmes.html.erb (Duration: 1.2ms | Allocations: 506)
+  Rendered filme/_sidebar.html.erb (Duration: 0.6ms | Allocations: 232)
+  Rendered filme/buscar_filme.js.erb (Duration: 4.6ms | Allocations: 2324)
+Completed 200 OK in 3335ms (Views: 6.2ms | ActiveRecord: 2155.7ms | Allocations: 107533)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mFilme Load (0.2ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 299534], ["LIMIT", 1]]
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 29], ["LIMIT", 1]]
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 29], ["LIMIT", 1]]
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 299534], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFilme Create (0.2ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "release_date") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-06-30 23:56:03.264555"], ["updated_at", "2021-06-30 23:56:03.264555"], ["id_filme", 0], ["original_title", "Mauricio"], ["overview", "Descrição do filme"], ["release_date", "12/12/12"]]
+  [1m[36mTRANSACTION (115.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFilme Create (0.2ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "release_date") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-07-01 00:03:31.844178"], ["updated_at", "2021-07-01 00:03:31.844178"], ["id_filme", 12], ["original_title", "Toquinho"], ["overview", "Texto"], ["release_date", "12/12/12"]]
+  [1m[36mTRANSACTION (125.1ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/detalhes/953" for ::1 at 2021-06-30 21:04:50 -0300
+Processing by FilmeController#detalhes_filme as HTML
+  Parameters: {"id"=>"953"}
+  Rendering layout layouts/application.html.erb
+  Rendering filme/detalhes_filme.html.erb within layouts/application
+  Rendered filme/detalhes_filme.html.erb within layouts/application (Duration: 0.8ms | Allocations: 238)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 3412)
+Completed 200 OK in 184ms (Views: 4.5ms | Allocations: 6683)
+
+
+Started GET "/" for ::1 at 2021-06-30 21:04:54 -0300
+Processing by FilmeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering filme/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered filme/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1767)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 4633)
+Completed 200 OK in 5ms (Views: 4.8ms | Allocations: 5098)
+
+
+Started POST "/filme/buscar_filme" for ::1 at 2021-06-30 21:05:05 -0300
+Processing by FilmeController#buscar_filme as JS
+  Parameters: {"authenticity_token"=>"[FILTERED]", "nome"=>"max"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/filme_controller.rb:37:in `salvar_novos_resultados'
+  [1m[36mFilme Load (0.2ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 272878], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Create (0.2ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "release_date") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-07-01 00:05:07.628011"], ["updated_at", "2021-07-01 00:05:07.628011"], ["id_filme", 272878], ["original_title", "Max"], ["overview", "O cachorro Max trabalha junto aos soldados americanos no Afeganistão, ajudando a detectar regiões com minas terrestres. Quando seu dono morre, o animal se torna feroz e não mantém contato com mais ninguém. A situação se transforma quando Justin, irmão do soldado falecido, decide se aproximar de Max e criar uma grande amizade."], ["release_date", "2015-06-26"]]
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mTRANSACTION (99.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 286567], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Create (0.2ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "release_date") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-07-01 00:05:07.735145"], ["updated_at", "2021-07-01 00:05:07.735145"], ["id_filme", 286567], ["original_title", "Max Steel"], ["overview", "O jovem Max McGrath (Ben Winchell) descobre que seu corpo pode gerar uma poderosa energia, e ele deve unir-se com o único ser capaz de conter esta energia: um misterioso extraterrestre tecno-orgânico chamado Steel. Unidos como o super-herói Max Steel, os dois amigos devem combater uma ameaça alienígena e desvendar os segredos do seu passado."], ["release_date", "2016-10-14"]]
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mTRANSACTION (104.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 76341], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Create (0.2ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "release_date") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-07-01 00:05:07.846335"], ["updated_at", "2021-07-01 00:05:07.846335"], ["id_filme", 76341], ["original_title", "Mad Max: Fury Road"], ["overview", "Em um mundo apocalíptico, Max Rockatansky acredita que a melhor forma de sobreviver é não depender de ninguém. Porém, após ser capturado pelo tirano Immortan Joe e seus rebeldes, Max se vê no meio de uma guerra mortal, iniciada pela imperatriz Furiosa que tenta salvar um grupo de garotas. Também tentando fugir, Max aceita ajudar Furiosa. Dessa vez, o tirano Joe está ainda mais implacável pois teve algo insubstituível roubado."], ["release_date", "2015-05-13"]]
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mTRANSACTION (125.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 9659], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Create (0.2ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "release_date") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-07-01 00:05:07.979499"], ["updated_at", "2021-07-01 00:05:07.979499"], ["id_filme", 9659], ["original_title", "Mad Max"], ["overview", "Num futuro próximo, o combustível que alimenta os motores dos carros é também motivo para crimes perpetrados por violentas gangues. Max é um jovem policial e junto com seus companheiros patrulha as estradas a fim de impedir a ação daqueles que insistem em perturbar a paz. A morte de um membro pelas mãos de Max dá início a uma série de crimes cruéis cometidos contra sua família e o melhor amigo. Assim, Max só tem uma escolha: vingança."], ["release_date", "1979-04-12"]]
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mTRANSACTION (128.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 8810], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Create (0.2ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "release_date") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-07-01 00:05:08.115024"], ["updated_at", "2021-07-01 00:05:08.115024"], ["id_filme", 8810], ["original_title", "Mad Max 2"], ["overview", "No futuro o bem mais precioso é a gasolina, em virtude de uma guerra que acabou com os campos petrolíferos do Oriente Médio. Tendo combustível pode-se fugir da morte ou se dirigir a algum lugar para matar alguém. Neste contexto, Max (Mel Gibson) resolve ajudar uma comunidade a defender sua refinaria contra uma gangue de motoqueiros."], ["release_date", "1981-12-24"]]
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mTRANSACTION (97.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 613377], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Create (0.2ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "release_date") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-07-01 00:05:08.220296"], ["updated_at", "2021-07-01 00:05:08.220296"], ["id_filme", 613377], ["original_title", "30 jours max"], ["overview", ""], ["release_date", "2020-10-14"]]
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mTRANSACTION (92.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 13051], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Create (0.2ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "release_date") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-07-01 00:05:08.320832"], ["updated_at", "2021-07-01 00:05:08.320832"], ["id_filme", 13051], ["original_title", "Max Payne"], ["overview", "Max Payne é um policial indisciplinado de Nova York, que está decidido a encontrar os responsáveis pelo brutal assassinato de sua esposa, seu bebê e de seu parceiro. O desejo de vingança faz com que ele se aprofunde cada vez mais no submundo obscuro de mafiosos, sendo obrigado a enfrentar até mesmo inimigos do além em uma batalha sobrenatural por justiça."], ["release_date", "2008-10-15"]]
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mTRANSACTION (102.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 24238], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Create (0.2ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "release_date") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-07-01 00:05:08.431034"], ["updated_at", "2021-07-01 00:05:08.431034"], ["id_filme", 24238], ["original_title", "Mary and Max"], ["overview", "Mary Daisy Dinkle é uma menina solitária de oito anos, que vive em Melbourne, na Austrália. Max Jerry Horovitz tem 44 anos e vive em Nova York. Obeso e também solitário, possui Síndrome de Asperger. Um certo dia, Mary encontra o endereço de Max em uma lista de endereços do correio de Nova York. Então resolve lhe escrever uma carta contando um pouco da sua vida. A partir daí, desenvolvem uma forte amizade, mesmo com tamanha distância e a diferença de idade existente entre eles, que transcorre de acordo com os altos e baixos da vida. Baseado em uma história real."], ["release_date", "2009-02-09"]]
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mTRANSACTION (95.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 9355], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Create (0.2ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "release_date") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-07-01 00:05:08.534498"], ["updated_at", "2021-07-01 00:05:08.534498"], ["id_filme", 9355], ["original_title", "Mad Max Beyond Thunderdome"], ["overview", "Após a destruição da civilização surge Bartertown, uma cidade no deserto com regras primitivas e mortais que tem uma governante que deseja consolidar seu poder a qualquer preço. Até que lá chega Max, que é forçado a participar de uma luta e, por ter se recusado a matar seu oponente, acaba sendo banido no deserto. Até que um grupo de jovens selvagens o salvam e passam a considerá-lo um messias que os levará até uma nova terra."], ["release_date", "1985-06-29"]]
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mTRANSACTION (88.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 158423], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Create (0.2ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "release_date") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-07-01 00:05:08.631034"], ["updated_at", "2021-07-01 00:05:08.631034"], ["id_filme", 158423], ["original_title", "Max"], ["overview", ""], ["release_date", "2013-01-18"]]
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mTRANSACTION (91.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 13752], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Create (0.3ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "release_date") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-07-01 00:05:08.730786"], ["updated_at", "2021-07-01 00:05:08.730786"], ["id_filme", 13752], ["original_title", "Max Manus"], ["overview", "Max Manus é um filme de guerra biográfico norueguês de 2008, baseado nos fatos reais da vida do lutador de resistência Max Manus (1914–96), após sua contribuição na Guerra de Inverno contra a União Soviética. A história segue Manus desde o início da Segunda Guerra Mundial na Noruega até o tempo de paz em 1945."], ["release_date", "2008-12-18"]]
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mTRANSACTION (116.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 446829], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Create (0.2ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "release_date") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-07-01 00:05:08.856220"], ["updated_at", "2021-07-01 00:05:08.856220"], ["id_filme", 446829], ["original_title", "Max 2: White House Hero"], ["overview", "Max, o filme que conta a história de um cachorro que ajudou pessoas no Afeganistão vai ganhar uma continuação, desta vez é dirigido por Brian Levant (Beethoven - O Magnífico) a partir de um roteiro escrito por Steven Altiere (Norm e os Invencíveis). O segundo filme vai se passar na Casa Branca."], ["release_date", "2017-05-05"]]
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mTRANSACTION (91.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 13560], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Create (0.3ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "release_date") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-07-01 00:05:08.956087"], ["updated_at", "2021-07-01 00:05:08.956087"], ["id_filme", 13560], ["original_title", "Max"], ["overview", ""], ["release_date", "2002-09-10"]]
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mTRANSACTION (113.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 34549], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Create (0.2ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "release_date") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-07-01 00:05:09.083205"], ["updated_at", "2021-07-01 00:05:09.083205"], ["id_filme", 34549], ["original_title", "Max Keeble's Big Move"], ["overview", "Max é um garoto de 12 anos que sofre nas mãos de seus colegas de escola. Ao descobrir que vai se mudar para outra cidade, ele percebe que não tem mais nada a perder e passa a arquitetar planos incríveis para acertar as contas com a turma. Após uma semana de brincadeiras e travessuras inacreditáveis, com a ajuda de seus melhores amigos, Max recebe a pior notícia de sua vida - sua família não vai mais se mudar! E agora, para trocar definitivamente a vida de um derrotado pela de um vencedor, ele terá de enfrentar as consequências de seus atos e improvisar rapidamente uma nova estratégia."], ["release_date", "2001-10-05"]]
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mTRANSACTION (138.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 158273], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Create (0.3ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "release_date") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-07-01 00:05:09.230478"], ["updated_at", "2021-07-01 00:05:09.230478"], ["id_filme", 158273], ["original_title", "Max and Mona"], ["overview", ""], ["release_date", "2004-09-11"]]
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mTRANSACTION (159.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 469227], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Create (0.2ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "release_date") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-07-01 00:05:09.397678"], ["updated_at", "2021-07-01 00:05:09.397678"], ["id_filme", 469227], ["original_title", "Insanity Max: 30 - Max Out Cardio"], ["overview", ""], ["release_date", "2014-12-02"]]
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mTRANSACTION (101.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 340023], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Create (0.2ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2021-07-01 00:05:09.508034"], ["updated_at", "2021-07-01 00:05:09.508034"], ["id_filme", 340023], ["original_title", "Mad Max: The Wasteland"], ["overview", ""]]
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mTRANSACTION (147.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 19728], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Create (0.3ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "release_date") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-07-01 00:05:09.664072"], ["updated_at", "2021-07-01 00:05:09.664072"], ["id_filme", 19728], ["original_title", "The Blue Max"], ["overview", ""], ["release_date", "1966-06-21"]]
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mTRANSACTION (145.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 647781], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Create (0.2ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "release_date") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-07-01 00:05:09.818372"], ["updated_at", "2021-07-01 00:05:09.818372"], ["id_filme", 647781], ["original_title", "Max Cloud"], ["overview", "Um viajante espacial cai em um planeta que abriga uma prisão intergaláctica."], ["release_date", "2020-12-18"]]
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mTRANSACTION (125.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Load (0.3ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 649812], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Create (0.2ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "release_date") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-07-01 00:05:09.951412"], ["updated_at", "2021-07-01 00:05:09.951412"], ["id_filme", 649812], ["original_title", "Max Richter's Sleep"], ["overview", "Este documentário acompanha o compositor Max Richter e sua parceira criativa Yulia Mahr enquanto se preparam para uma ambiciosa apresentação ao ar livre de sua obra-prima de oito horas Sleep em Los Angeles, explorando ainda a origem e o impacto dessa composição revolucionária."], ["release_date", "2020-09-11"]]
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mTRANSACTION (124.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  Rendering filme/buscar_filme.js.erb
+  Rendered filme/_lista_filmes.html.erb (Duration: 0.4ms | Allocations: 285)
+  Rendered filme/_sidebar.html.erb (Duration: 0.1ms | Allocations: 51)
+  Rendered filme/buscar_filme.js.erb (Duration: 2.2ms | Allocations: 1495)
+Completed 200 OK in 4136ms (Views: 2.9ms | ActiveRecord: 2297.5ms | Allocations: 119074)
+
+
+Started GET "/" for ::1 at 2021-06-30 21:06:01 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FilmeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering filme/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered filme/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 2667)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 8350)
+Completed 200 OK in 14ms (Views: 9.7ms | ActiveRecord: 0.0ms | Allocations: 11862)
+
+
+Started POST "/filme/buscar_filme" for ::1 at 2021-06-30 21:06:04 -0300
+Processing by FilmeController#buscar_filme as JS
+  Parameters: {"authenticity_token"=>"[FILTERED]", "nome"=>"max"}
+  [1m[36mFilme Load (0.2ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 272878], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 286567], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.0ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 76341], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.0ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 9659], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.0ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 8810], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.0ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 613377], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.0ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 13051], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.0ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 24238], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.0ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 9355], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.0ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 158423], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.0ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 13752], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.0ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 446829], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.0ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 13560], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.0ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 34549], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.0ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 158273], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.0ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 469227], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.0ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 340023], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.0ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 19728], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.0ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 647781], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.0ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 649812], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  Rendering filme/buscar_filme.js.erb
+  Rendered filme/_lista_filmes.html.erb (Duration: 0.5ms | Allocations: 532)
+  Rendered filme/_sidebar.html.erb (Duration: 0.3ms | Allocations: 232)
+  Rendered filme/buscar_filme.js.erb (Duration: 2.4ms | Allocations: 2364)
+Completed 200 OK in 5391ms (Views: 3.7ms | ActiveRecord: 1.4ms | Allocations: 35387)
+
+
+Started POST "/filme/buscar_filme" for ::1 at 2021-06-30 21:06:32 -0300
+Processing by FilmeController#buscar_filme as JS
+  Parameters: {"authenticity_token"=>"[FILTERED]", "nome"=>"toy story"}
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 862], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Create (0.2ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "release_date") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-07-01 00:06:33.478537"], ["updated_at", "2021-07-01 00:06:33.478537"], ["id_filme", 862], ["original_title", "Toy Story"], ["overview", "Quando um reluzente 'ranger' do espaço chamado Buzz Lightyear invade o mundo de um cowboy de corda chamado Woody, desencadeia uma hilariante briga entre brinquedos. Agora o favoritismo de Woody no coração do seu jovem dono está em perigo... assim como as vidas de Buzz e Woody."], ["release_date", "1995-10-30"]]
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mTRANSACTION (103.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 301528], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Create (0.2ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "release_date") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-07-01 00:06:33.589663"], ["updated_at", "2021-07-01 00:06:33.589663"], ["id_filme", 301528], ["original_title", "Toy Story 4"], ["overview", "Quando um novo brinquedo chamado \"Forky\" se junta a Woody e sua turma, uma viagem ao lado de velhos e novos amigos revela quão grande o mundo pode ser para um brinquedo."], ["release_date", "2019-06-19"]]
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mTRANSACTION (103.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 863], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Create (0.2ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "release_date") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-07-01 00:06:33.700276"], ["updated_at", "2021-07-01 00:06:33.700276"], ["id_filme", 863], ["original_title", "Toy Story 2"], ["overview", "Enquanto Andy está no acampamento de férias, um ganancioso colecionador de brinquedos rapta Woody. Antes que se possa dizer \"ao infinito e além\", Buzz Lightyear, o Sr. Cabeça de Batata, o Porquinho, Rex e Slinky entram em ação, numa missão de resgate."], ["release_date", "1999-10-30"]]
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mTRANSACTION (104.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 10193], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Create (0.2ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "release_date") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-07-01 00:06:33.811747"], ["updated_at", "2021-07-01 00:06:33.811747"], ["id_filme", 10193], ["original_title", "Toy Story 3"], ["overview", "Os brinquedos são entregues por engano em uma creche em vez de no sótão logo antes de Andy partir para a faculdade, e cabe a Woody convencer os outros brinquedos de que eles não foram abandonados e voltar para casa."], ["release_date", "2010-06-16"]]
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mTRANSACTION (91.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 256835], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Create (0.2ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "release_date") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-07-01 00:06:33.911844"], ["updated_at", "2021-07-01 00:06:33.911844"], ["id_filme", 256835], ["original_title", "Toy Story That Time Forgot"], ["overview", "Durante uma brincadeira de natal, Woody, Buzz e companhia entram em uma nova aventura quando se deparam com um grupo de perigosas e delirantes figuras de ação. Cabe a Trixie ajudar seus amigos a voltarem sãos e salvos para o quarto."], ["release_date", "2014-12-02"]]
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mTRANSACTION (90.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 818274], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Create (0.3ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "release_date") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-07-01 00:06:34.011208"], ["updated_at", "2021-07-01 00:06:34.011208"], ["id_filme", 818274], ["original_title", "Bienvenue à Toy Story Playland"], ["overview", ""], ["release_date", "2010-08-17"]]
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mTRANSACTION (91.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 464729], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Create (0.3ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "release_date") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-07-01 00:06:34.111706"], ["updated_at", "2021-07-01 00:06:34.111706"], ["id_filme", 464729], ["original_title", "The Story Behind 'Toy Story'"], ["overview", ""], ["release_date", "1996-12-18"]]
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mTRANSACTION (90.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 786568], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Create (0.1ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "release_date") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-07-01 00:06:34.211372"], ["updated_at", "2021-07-01 00:06:34.211372"], ["id_filme", 786568], ["original_title", "Toy Story 3 in Real Life"], ["overview", ""], ["release_date", "2020-01-25"]]
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mTRANSACTION (92.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 797317], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Create (0.3ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "release_date") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-07-01 00:06:34.310983"], ["updated_at", "2021-07-01 00:06:34.310983"], ["id_filme", 797317], ["original_title", "Toy Story 5"], ["overview", ""], ["release_date", ""]]
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mTRANSACTION (90.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 757564], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Create (0.3ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "release_date") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-07-01 00:06:34.410810"], ["updated_at", "2021-07-01 00:06:34.410810"], ["id_filme", 757564], ["original_title", "Child's Play: Toy Story Massacre"], ["overview", ""], ["release_date", "2019-06-21"]]
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mTRANSACTION (90.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 711704], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Create (0.3ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "release_date") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-07-01 00:06:34.511082"], ["updated_at", "2021-07-01 00:06:34.511082"], ["id_filme", 711704], ["original_title", "The Making of 'Toy Story'"], ["overview", ""], ["release_date", "1995-12-02"]]
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mTRANSACTION (113.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 626033], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Create (0.2ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "release_date") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-07-01 00:06:34.632540"], ["updated_at", "2021-07-01 00:06:34.632540"], ["id_filme", 626033], ["original_title", "Toy Story 3: Na Moda com Ken!"], ["overview", "Entrevista com Ken, realizada na sua mansão. Hilário, imperdível!"], ["release_date", "2010-08-30"]]
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mTRANSACTION (91.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 213121], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Create (0.2ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "release_date") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-07-01 00:06:34.732896"], ["updated_at", "2021-07-01 00:06:34.732896"], ["id_filme", 213121], ["original_title", "Toy Story of Terror!"], ["overview", "Os brinquedos partem em uma viagem juntamente com Bonnie, mas um evento inesperado faz com que todos parem em um hotel de beira de estrada. Quando um dos brinquedos simplesmente desaparece, Woody, Buzz e toda a turma precisam enfrentar o medo do desconhecido para encontrá-lo."], ["release_date", "2013-10-16"]]
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mTRANSACTION (127.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 210296], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Create (0.2ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "release_date") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-07-01 00:06:34.867967"], ["updated_at", "2021-07-01 00:06:34.867967"], ["id_filme", 210296], ["original_title", "Charlie: A Toy Story"], ["overview", ""], ["release_date", "2013-04-02"]]
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mTRANSACTION (88.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 406122], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Create (0.3ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "release_date") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-07-01 00:06:34.964669"], ["updated_at", "2021-07-01 00:06:34.964669"], ["id_filme", 406122], ["original_title", "Toy Story at 20: To Infinity and Beyond"], ["overview", ""], ["release_date", "2015-12-10"]]
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mTRANSACTION (113.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 519966], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Create (0.2ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "release_date") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-07-01 00:06:35.087864"], ["updated_at", "2021-07-01 00:06:35.087864"], ["id_filme", 519966], ["original_title", "The Great Canadian Toy Story"], ["overview", ""], ["release_date", ""]]
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mTRANSACTION (146.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 431575], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Create (0.2ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "release_date") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-07-01 00:06:35.242816"], ["updated_at", "2021-07-01 00:06:35.242816"], ["id_filme", 431575], ["original_title", "The Rogue One: A Star Wars Toy Story"], ["overview", ""], ["release_date", "2016-12-15"]]
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mTRANSACTION (147.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 455535], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Create (0.2ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "release_date") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-07-01 00:06:35.403269"], ["updated_at", "2021-07-01 00:06:35.403269"], ["id_filme", 455535], ["original_title", "Dancing Through Life: The Dorothy Toy Story"], ["overview", ""], ["release_date", ""]]
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mTRANSACTION (142.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 77887], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Create (0.2ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "release_date") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-07-01 00:06:35.553932"], ["updated_at", "2021-07-01 00:06:35.553932"], ["id_filme", 77887], ["original_title", "Hawaiian Vacation"], ["overview", "Bonnie está indo viajar para o Havaí. Ken e Barbie se escondem na mochila escolar de Bonnie para ir junto, mas ela não leva sua mochila escolar em suas Férias, deixando Ken e Barbie muito tristes. Buzz, Woody e o resto dos brinquedos tentam fazer Ken e Barbie se sentirem no Havaí, mas infelizmente não dá certo, então os dois fazem seu encontro fora da casa onde está nevando, mas eles afundam na neve. Toy Story - Férias no Havaí. Faz parte da Coleção Pixar Curtas 02."], ["release_date", "2011-06-16"]]
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mTRANSACTION (146.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 130925], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Create (0.2ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "release_date") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-07-01 00:06:35.708518"], ["updated_at", "2021-07-01 00:06:35.708518"], ["id_filme", 130925], ["original_title", "Partysaurus Rex"], ["overview", "Este curta-metragem da Pixar traz novamente alguns personagens da franquia Toy Story, em especial o Tiranossauro Rex. Ele se junta com outros brinquedos, esquecidos no fundo da banheira de Bonnie, e prepara uma festa animada, regada a muita música e espuma de banho."], ["release_date", "2012-09-14"]]
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mTRANSACTION (147.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  Rendering filme/buscar_filme.js.erb
+  Rendered filme/_lista_filmes.html.erb (Duration: 0.4ms | Allocations: 267)
+  Rendered filme/_sidebar.html.erb (Duration: 0.1ms | Allocations: 53)
+  Rendered filme/buscar_filme.js.erb (Duration: 2.3ms | Allocations: 1469)
+Completed 200 OK in 3598ms (Views: 2.9ms | ActiveRecord: 2221.7ms | Allocations: 111799)
+
+
