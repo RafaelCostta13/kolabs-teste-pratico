@@ -1,0 +1,14 @@
+<div id="card" class="card">
+	<table class="table">
+		<tr>
+			<th>Nome da produtora</th>
+			<th>Origem</th>
+		</tr>
+		<% produtoras.each do |produtora| %>
+			<tr>
+				<td><%= produtora['name'] %></td>
+				<td><%= produtora['origin_country']%></td>
+			</tr>
+		<% end %>
+	</table>	
+</div>

@@ -13,10 +13,8 @@
 	end
 
 	def self.construir_url(query, type ,page=1)
-
 		url = BASE_URL + "#{type}?" + API_KEY + "&#{LANGUAGE}" + "&query=#{query}" + "&page=#{page}" + '&include_adult=false'
 	end
-
 
 	def self.buscar_filmes(query)
 		type = "movie"

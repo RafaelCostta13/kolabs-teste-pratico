@@ -1,0 +1,12 @@
+<div id="card" class="card">
+	<table class="table">
+		<tr>
+			<th>Nome</th>
+		</tr>
+		<% pessoas.each do |pessoa| %>
+			<tr>
+				<td><%= pessoa['name'] %></td>
+			</tr>
+		<% end %>
+	</table>
+</div>

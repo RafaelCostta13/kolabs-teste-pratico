@@ -1,0 +1,13 @@
+<div id="card" class="card">
+	<table class="table">
+		<tr>
+			<th>Palavra</th>
+		</tr>
+		<% palavras_chave.each do |palavra| %>
+			<tr>
+				<td><%= palavra['name'] %></td>
+			</tr>
+		<% end %>
+
+	</table>
+</div>

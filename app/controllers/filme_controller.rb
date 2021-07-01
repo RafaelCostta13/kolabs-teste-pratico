@@ -1,7 +1,6 @@
 class FilmeController < ApplicationController
 	layout 'application'
 
-
 	def index
 			
 	end
@@ -20,11 +19,59 @@ class FilmeController < ApplicationController
 			format.js
 		end
 		
-		@count_filmes = @filmes.length 
+		@count_filmes = @filmes.length
 
 		salvar_novos_resultados(@filmes)
 
 		return @filmes, @count_filmes, @series, @coletaneas, @pessoas, @palavra_chave, @produtoras, @termo_busca
+	end
+
+	def filtro_serie
+		@series = InterfaceApi::buscar_series(params[:nome])
+		respond_to do |format|
+			format.html{redirect_to '/'}
+			format.js
+		end 
+	end
+
+	def filtro_filme
+		@filmes = InterfaceApi::buscar_filmes(params[:nome])
+		respond_to do |format|
+			format.html{redirect_to '/'}
+			format.js
+		end
+	end
+
+	def filtro_pessoa
+		@pessoas = InterfaceApi::buscar_pessoas(params[:nome])
+		respond_to do |format|
+			format.html {redirect_to '/'}
+			format.js
+		end
+	end
+
+	def filtro_coletanea
+		@coletaneas = InterfaceApi::buscar_coletaneas(params[:nome])
+		respond_to do |format|
+			format.html {redirect_to '/'}
+			format.js
+		end	
+	end
+
+	def filtro_palavras_chave
+		@palavras_chave = InterfaceApi::buscar_palavra_chave(params[:nome])
+		respond_to do |format|
+			format.html {redirect_to '/'}
+			format.js
+		end
+	end
+
+	def filtro_produtoras
+		@produtoras = InterfaceApi::buscar_produtoras(params[:nome])
+		respond_to do |format|
+			format.html {redirect_to '/'}
+			format.js
+		end
 	end
 
 	def detalhes_filme
