@@ -1,0 +1,12 @@
+<div class="container d-flex justify-content-between mt-3">
+	<div class="container-img col-4">
+		<img class="d-img" src="<%= 'https://image.tmdb.org/t/p/w500/' + "#{@coletanea['poster_path']}"  %>">
+	</div>
+	<div class="col-7">
+		<h1><%= @coletanea['title'] %></h1>
+		<p class=""><%= @coletanea['release_date'] %></p>
+		<p><%= @coletanea['overview'] %></p>
+	</div>
+</div>
+
+	

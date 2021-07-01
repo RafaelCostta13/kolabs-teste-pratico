@@ -1,0 +1,18 @@
+<!-- Begin card -->
+	<div id="card" class="row gx-0">
+		
+		<% coletaneas.each do |coletanea| %>
+		<div class="row g-0 mt-2 bg-light position-relative border border-2 rounded shadow card-container">
+				<div class="col-md-2 img" style="height: auto;">
+				  <img src="<%= 'https://image.tmdb.org/t/p/w500/' + "#{coletanea['poster_path']}" %>" class="w-100 h-100 rounded-start" alt="...">
+				</div>
+				<div class="col-md-10 p-md-3">
+				  <h5 class="mb-0"><%= coletanea['original_title'] %></h5>
+				  <p class="mb-0"><%= coletanea['release_date']%></p>
+				  <p class="mb-0 card-text"><%=  coletanea['overview']%></p>
+				  <a href="<%= "detalhes/coletanea/#{coletanea['id']}" %>" class="stretched-link" style="font-size: 0px;"></a>
+				</div>
+		</div>
+		<% end %>
+	</div>
+<!-- end -->

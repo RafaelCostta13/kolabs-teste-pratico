@@ -78,8 +78,12 @@ class FilmeController < ApplicationController
 		@filme = InterfaceApi::detalhes_item(params[:id], "movie")
 	end
 
-	def detalhes_filme
-		@filme = InterfaceApi::detalhes_item(params[:id], "movie")
+	def detalhes_serie
+		@serie = InterfaceApi::detalhes_item(params[:id], "tv")
+	end
+
+	def detalhes_coletaneas
+		@coletanea = InterfaceApi::detalhes_item(params[:id], "collection")
 	end
 
 private
