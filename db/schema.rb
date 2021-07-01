@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_30_005140) do
+ActiveRecord::Schema.define(version: 2021_07_01_064520) do
 
   create_table "filmes", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
@@ -20,6 +20,12 @@ ActiveRecord::Schema.define(version: 2021_06_30_005140) do
     t.text "overview"
     t.string "poster_path"
     t.string "release_date"
+  end
+
+  create_table "historico_buscas", force: :cascade do |t|
+    t.string "termo_pesquisa"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "inteface_apis", force: :cascade do |t|

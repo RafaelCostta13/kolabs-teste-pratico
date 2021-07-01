@@ -1,5 +1,6 @@
 class FilmeController < ApplicationController
 	layout 'application'
+	after_action :salva_historico, only: [:buscar_filme]
 
 	def index
 			
@@ -98,6 +99,18 @@ class FilmeController < ApplicationController
 		@filme = Filme.find(params[:id])
 	end
 
+	def create
+		@filme = Filme.new(permit_params)
+		if @filme.save
+			flash[:success] = "Salvo com sucesso"
+		else
+			flash[:fail] = "Ocorreu algum erro ao savar no banco de dados"
+		end
+		respond_to do |format|
+			format.js
+		end
+	end
+
 	def editar
 		@filme = Filme.find(params[:id])
 		if @filme.update(permit_params)
@@ -119,11 +132,14 @@ class FilmeController < ApplicationController
 		redirect_to filmes_locais_path
 	end
 
+	def mostrar_historico
+		@historico = HistoricoBusca.all
+	end
 
 private
 
 	def permit_params
-		params.require(:filme).permit(:id, :original_title, :overview, :release_date )
+		params.require(:filme).permit(:id_filme, :original_title, :overview, :release_date, :poster_path )
 	end
 
 	def salvar_novos_resultados(filmes)
@@ -137,5 +153,11 @@ private
 							   filme['release_date'])
 			end
 		end
+	end
+
+	def salva_historico
+		@historico = HistoricoBusca.new
+		@historico.termo_pesquisa = params[:nome]
+		@historico.save
 	end
 end

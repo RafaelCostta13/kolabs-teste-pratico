@@ -1,0 +1,2 @@
+class HistoricoBusca < ApplicationRecord
+end

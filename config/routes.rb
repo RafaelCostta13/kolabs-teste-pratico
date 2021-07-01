@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   get 'detalhes/filmes_locais/:id', to: "filme#detalhes_filmes_locais"
   patch 'editar/:id', to: "filme#editar"
   delete 'excluir/:id', to: "filme#destroy"
+  post 'filme/create'
+  get 'filme/mostrar_historico'
   
 
   get 'series/:nome', to: "filme#filtro_serie"

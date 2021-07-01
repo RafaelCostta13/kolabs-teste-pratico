@@ -6,6 +6,19 @@
 		<h1><%= @filme['title'] %></h1>
 		<p class=""><%= @filme['release_date'] %></p>
 		<p><%= @filme['overview'] %></p>
+
+		<%= form_with url: filme_create_path, method: :post, local: false do |form| %>
+			<input type="hidden" name="filme[id_filme]" value="<%= @filme['id'] %>">
+			<input type="hidden" name="filme[original_title]" value="<%= @filme['title'] %>">
+			<input type="hidden" name="filme[release_date]" value="<%= @filme['release_date'] %>">
+			<input type="hidden" name="filme[overview]" value="<%= @filme['overview']%>">
+			<input type="hidden" name="filme[poster_path]" value="<%= 'https://image.tmdb.org/t/p/w500' + "#{@filme['poster_path']}"  %>">
+			<input class="btn btn-primary" type="submit" name="submit" value="Salvar no banco de dados">
+		<% end %>
+
+		<div id="flash">
+			
+		</div>
 	</div>
 </div>
 
