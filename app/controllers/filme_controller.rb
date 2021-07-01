@@ -20,11 +20,10 @@ class FilmeController < ApplicationController
 			format.js
 		end
 		
-		@count_filmes = @filmes.length
 
 		salvar_novos_resultados(@filmes)
 
-		return @filmes, @count_filmes, @series, @coletaneas, @pessoas, @palavra_chave, @produtoras, @termo_busca
+		return @filmes, @series, @coletaneas, @pessoas, @palavra_chave, @produtoras, @termo_busca
 	end
 
 	def filtro_serie

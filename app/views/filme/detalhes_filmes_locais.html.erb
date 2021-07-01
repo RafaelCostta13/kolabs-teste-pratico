@@ -1,4 +1,5 @@
 <div class="container d-flex justify-content-between mt-3">
+<% if @filme.present? %>
 	<div class="container-img col-4">
 		<img class="d-img" src="<%= 'https://image.tmdb.org/t/p/w500/' + "#{@filme['poster_path']}"  %>">
 	</div>
@@ -49,4 +50,8 @@
       </div>
     </div>
   </div>
+
+<% else %>
+  <h1>Você ainda não possui nenhum filme salvo !</h1>
+<% end %>
 </div>

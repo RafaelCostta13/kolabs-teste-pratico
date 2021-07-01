@@ -14119,3 +14119,1148 @@ Processing by FilmeController#detalhes_filmes_locais as HTML
 Completed 200 OK in 9ms (Views: 6.3ms | ActiveRecord: 0.1ms | Allocations: 4697)
 
 
+Started GET "/" for ::1 at 2021-07-01 05:15:52 -0300
+Started GET "/" for ::1 at 2021-07-01 05:15:52 -0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FilmeController#index as HTML
+Processing by FilmeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering layout layouts/application.html.erb
+  Rendering filme/index.html.erb within layouts/application
+  Rendering filme/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered filme/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 3668)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered filme/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 4541)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.6ms | Allocations: 14287)
+Completed 200 OK in 22ms (Views: 20.4ms | ActiveRecord: 0.0ms | Allocations: 16666)
+
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 22.3ms | Allocations: 16585)
+Completed 200 OK in 28ms (Views: 23.8ms | ActiveRecord: 0.0ms | Allocations: 20468)
+
+
+Started POST "/filme/buscar_filme" for ::1 at 2021-07-01 05:15:54 -0300
+Processing by FilmeController#buscar_filme as JS
+  Parameters: {"authenticity_token"=>"[FILTERED]", "nome"=>"avengers"}
+  [1m[36mFilme Load (0.2ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 299534], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 299536], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.0ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 24428], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.0ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 99861], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.0ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 323660], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.0ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 9320], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.0ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 14611], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.0ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 14609], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.0ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 14613], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.0ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 448366], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.0ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 347158], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.0ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 521720], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.0ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 448368], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.0ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 368304], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.0ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 487555], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.0ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 538153], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 223291], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 432413], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.0ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 58906], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.2ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 416101], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  Rendering filme/buscar_filme.js.erb
+  Rendered filme/_lista_filmes.html.erb (Duration: 0.4ms | Allocations: 529)
+  Rendered filme/_sidebar.html.erb (Duration: 4.7ms | Allocations: 4624)
+  Rendered filme/buscar_filme.js.erb (Duration: 6.4ms | Allocations: 6666)
+Completed 500 Internal Server Error in 261ms (ActiveRecord: 1.6ms | Allocations: 37272)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `filmes' for #<ActionView::Base:0x0000000001ef50>
+Did you mean?  @filmes):
+    1: <div id="sidebar_itens">
+    2: 	<a href="<%= "/filmes/#{@termo_busca}" %>" class="border-bottom-0 list-group-item list-group-item-action d-flex justify-content-between" data-remote="true" data-method="get">
+    3: 	 	<strong>Filmes</strong> <span class="badge text-dark bg-light "><%= filmes.length %></span>
+    4: 	</a>
+    5: 	<a id="id_serie" href="<%= "/series/#{@termo_busca}" %>" class="border-bottom-0 list-group-item list-group-item-action d-flex justify-content-between" data-remote="true" data-method="get">
+    6: 	  	<strong>Séries</strong> <span class="badge bg-light text-dark"><%= series.count %></span> 
+  
+app/views/filme/_sidebar.html.erb:3
+app/views/filme/buscar_filme.js.erb:3
+Started GET "/" for ::1 at 2021-07-01 05:16:01 -0300
+Processing by FilmeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering filme/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered filme/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1789)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 4752)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms | Allocations: 5282)
+
+
+Started GET "/" for ::1 at 2021-07-01 05:17:59 -0300
+Processing by FilmeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering filme/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered filme/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 2107)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 5273)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.0ms | Allocations: 6355)
+
+
+Started POST "/filme/buscar_filme" for ::1 at 2021-07-01 05:18:11 -0300
+Processing by FilmeController#buscar_filme as JS
+  Parameters: {"authenticity_token"=>"[FILTERED]", "nome"=>"toy"}
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 862], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 301528], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 863], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 10193], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 256835], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 13927], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Create (0.6ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "release_date") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-07-01 08:18:12.601029"], ["updated_at", "2021-07-01 08:18:12.601029"], ["id_filme", 13927], ["original_title", "Tin Toy"], ["overview", "Uma banda formada por um brinquedo de lata tenta se salvar de um bebê destrutivo. Faz parte da Coleção Pixar Curtas 01."], ["release_date", "1988-08-01"]]
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mTRANSACTION (110.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 10750], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Create (0.3ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "release_date") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-07-01 08:18:12.720432"], ["updated_at", "2021-07-01 08:18:12.720432"], ["id_filme", 10750], ["original_title", "Toy Soldiers"], ["overview", "Um grupo de garotos rebeldes tem de enfrentar um grupo de terroristas que vem a toma-los como reféns em um colégio e exigem a libertação de um poderoso traficante de drogas. Mas os próprios garotos irão elaborar um plano para derrota-los."], ["release_date", "1991-04-24"]]
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mTRANSACTION (104.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 23805], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Create (0.2ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "release_date") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-07-01 08:18:12.832004"], ["updated_at", "2021-07-01 08:18:12.832004"], ["id_filme", 23805], ["original_title", "The Toy"], ["overview", "Milionário contrata um escritor negro para \"dar de presente\" ao filho - um verdadeiro demônio que não dá um minuto de sossego. Um clássico da Sessão da Tarde, refilmagem da comédia francesa \"Le Jouet\", de 1976."], ["release_date", "1982-12-10"]]
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mTRANSACTION (114.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 818274], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 355772], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Create (0.2ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "release_date") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-07-01 08:18:12.954261"], ["updated_at", "2021-07-01 08:18:12.954261"], ["id_filme", 355772], ["original_title", "ToY"], ["overview", ""], ["release_date", "2015-08-22"]]
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mTRANSACTION (115.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 464729], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 786568], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 797317], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 585397], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Create (0.3ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "release_date") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-07-01 08:18:13.080481"], ["updated_at", "2021-07-01 08:18:13.080481"], ["id_filme", 585397], ["original_title", "Tiny Toy Stories"], ["overview", ""], ["release_date", "1996-10-29"]]
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mTRANSACTION (108.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 485034], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Create (1.0ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "release_date") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-07-01 08:18:13.198244"], ["updated_at", "2021-07-01 08:18:13.198244"], ["id_filme", 485034], ["original_title", "A Very Merry Toy Store"], ["overview", ""], ["release_date", "2017-11-26"]]
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mTRANSACTION (112.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 514782], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Create (0.3ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "release_date") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-07-01 08:18:13.319022"], ["updated_at", "2021-07-01 08:18:13.319022"], ["id_filme", 514782], ["original_title", "Toy Gun"], ["overview", ""], ["release_date", "2018-01-01"]]
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mTRANSACTION (115.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 711704], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 757564], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 77665], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Create (0.3ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "release_date") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-07-01 08:18:13.444993"], ["updated_at", "2021-07-01 08:18:13.444993"], ["id_filme", 77665], ["original_title", "Boy Toy"], ["overview", ""], ["release_date", "2011-08-31"]]
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mTRANSACTION (155.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 47670], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Create (0.2ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "release_date") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-07-01 08:18:13.608339"], ["updated_at", "2021-07-01 08:18:13.608339"], ["id_filme", 47670], ["original_title", "The Christmas Toy"], ["overview", ""], ["release_date", "1986-12-06"]]
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mTRANSACTION (128.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  Rendering filme/buscar_filme.js.erb
+  Rendered filme/_lista_filmes.html.erb (Duration: 0.6ms | Allocations: 479)
+  Rendered filme/_sidebar.html.erb (Duration: 0.6ms | Allocations: 398)
+  Rendered filme/buscar_filme.js.erb (Duration: 3.1ms | Allocations: 2446)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/filme_controller.rb:160:in `salva_historico'
+  [1m[36mHistoricoBusca Create (0.2ms)[0m  [1m[32mINSERT INTO "historico_buscas" ("termo_pesquisa", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["termo_pesquisa", "toy"], ["created_at", "2021-07-01 08:18:13.759013"], ["updated_at", "2021-07-01 08:18:13.759013"]]
+  ↳ app/controllers/filme_controller.rb:160:in `salva_historico'
+  [1m[36mTRANSACTION (131.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/filme_controller.rb:160:in `salva_historico'
+Completed 200 OK in 2444ms (Views: 4.4ms | ActiveRecord: 1202.3ms | Allocations: 75594)
+
+
+Started GET "/palavras_chave/toy" for ::1 at 2021-07-01 05:18:17 -0300
+Processing by FilmeController#filtro_palavras_chave as JS
+  Parameters: {"nome"=>"toy"}
+  Rendering filme/filtro_palavras_chave.js.erb
+  Rendered filme/_lista_palavras_chave.html.erb (Duration: 0.4ms | Allocations: 206)
+  Rendered filme/filtro_palavras_chave.js.erb (Duration: 1.4ms | Allocations: 671)
+Completed 200 OK in 35ms (Views: 2.3ms | ActiveRecord: 0.0ms | Allocations: 3652)
+
+
+Started GET "/coletaneas/toy" for ::1 at 2021-07-01 05:18:19 -0300
+Processing by FilmeController#filtro_coletanea as JS
+  Parameters: {"nome"=>"toy"}
+  Rendering filme/filtro_coletanea.js.erb
+  Rendered filme/_lista_coletaneas.html.erb (Duration: 0.6ms | Allocations: 300)
+  Rendered filme/filtro_coletanea.js.erb (Duration: 1.9ms | Allocations: 852)
+Completed 200 OK in 37ms (Views: 2.6ms | ActiveRecord: 0.0ms | Allocations: 3527)
+
+
+Started GET "/pessoas/toy" for ::1 at 2021-07-01 05:18:21 -0300
+Processing by FilmeController#filtro_pessoa as JS
+  Parameters: {"nome"=>"toy"}
+  Rendering filme/filtro_pessoa.js.erb
+  Rendered filme/_lista_pessoas.html.erb (Duration: 0.4ms | Allocations: 197)
+  Rendered filme/filtro_pessoa.js.erb (Duration: 1.3ms | Allocations: 636)
+Completed 200 OK in 59ms (Views: 1.9ms | ActiveRecord: 0.0ms | Allocations: 4266)
+
+
+Started GET "/series/toy" for ::1 at 2021-07-01 05:18:23 -0300
+Processing by FilmeController#filtro_serie as JS
+  Parameters: {"nome"=>"toy"}
+  Rendering filme/filtro_serie.js.erb
+  Rendered filme/_lista_series.html.erb (Duration: 0.6ms | Allocations: 436)
+  Rendered filme/filtro_serie.js.erb (Duration: 2.5ms | Allocations: 1647)
+Completed 200 OK in 38ms (Views: 3.1ms | ActiveRecord: 0.0ms | Allocations: 4546)
+
+
+Started GET "/filmes/toy" for ::1 at 2021-07-01 05:18:24 -0300
+Processing by FilmeController#filtro_filme as JS
+  Parameters: {"nome"=>"toy"}
+  Rendering filme/filtro_filme.js.erb
+  Rendered filme/_lista_filmes.html.erb (Duration: 0.4ms | Allocations: 272)
+  Rendered filme/filtro_filme.js.erb (Duration: 2.0ms | Allocations: 1350)
+Completed 200 OK in 39ms (Views: 2.6ms | ActiveRecord: 0.0ms | Allocations: 4267)
+
+
+Started GET "/palavras_chave/toy" for ::1 at 2021-07-01 05:18:25 -0300
+Processing by FilmeController#filtro_palavras_chave as JS
+  Parameters: {"nome"=>"toy"}
+  Rendering filme/filtro_palavras_chave.js.erb
+  Rendered filme/_lista_palavras_chave.html.erb (Duration: 0.2ms | Allocations: 59)
+  Rendered filme/filtro_palavras_chave.js.erb (Duration: 0.5ms | Allocations: 277)
+Completed 200 OK in 33ms (Views: 1.3ms | ActiveRecord: 0.0ms | Allocations: 2830)
+
+
+Started GET "/produtoras/toy" for ::1 at 2021-07-01 05:18:26 -0300
+Processing by FilmeController#filtro_produtoras as JS
+  Parameters: {"nome"=>"toy"}
+  Rendering filme/filtro_produtoras.js.erb
+  Rendered filme/_lista_produtoras.html.erb (Duration: 0.6ms | Allocations: 237)
+  Rendered filme/filtro_produtoras.js.erb (Duration: 1.3ms | Allocations: 717)
+Completed 200 OK in 34ms (Views: 1.9ms | ActiveRecord: 0.0ms | Allocations: 3459)
+
+
+Started GET "/filmes_locais" for ::1 at 2021-07-01 05:18:28 -0300
+Processing by FilmeController#filmes_locais as JS
+  Rendering filme/filmes_locais.js.erb
+  Rendered filme/_flash.html.erb (Duration: 0.4ms | Allocations: 230)
+  [1m[36mFilme Load (0.3ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" LIMIT ?[0m  [["LIMIT", 20]]
+  ↳ app/views/filme/_lista_filmes_locais.html.erb:7
+  Rendered filme/_lista_filmes_locais.html.erb (Duration: 3.6ms | Allocations: 2085)
+  Rendered filme/filmes_locais.js.erb (Duration: 5.1ms | Allocations: 3298)
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.3ms | Allocations: 4406)
+
+
+Started GET "/filme/mostrar_historico" for ::1 at 2021-07-01 05:18:29 -0300
+Processing by FilmeController#mostrar_historico as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering filme/mostrar_historico.html.erb within layouts/application
+  [1m[36mHistoricoBusca Load (0.2ms)[0m  [1m[34mSELECT "historico_buscas".* FROM "historico_buscas"[0m
+  ↳ app/views/filme/mostrar_historico.html.erb:7
+  Rendered filme/mostrar_historico.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1283)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 4417)
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.2ms | Allocations: 5010)
+
+
+Started GET "/filmes_locais" for ::1 at 2021-07-01 05:18:34 -0300
+Processing by FilmeController#filmes_locais as JS
+  Rendering filme/filmes_locais.js.erb
+  Rendered filme/_flash.html.erb (Duration: 0.1ms | Allocations: 56)
+  [1m[36mFilme Load (0.2ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" LIMIT ?[0m  [["LIMIT", 20]]
+  ↳ app/views/filme/_lista_filmes_locais.html.erb:7
+  Rendered filme/_lista_filmes_locais.html.erb (Duration: 2.8ms | Allocations: 1459)
+  Rendered filme/filmes_locais.js.erb (Duration: 3.9ms | Allocations: 2453)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.2ms | Allocations: 3426)
+
+
+Started GET "/produtoras/toy" for ::1 at 2021-07-01 05:18:34 -0300
+Processing by FilmeController#filtro_produtoras as JS
+  Parameters: {"nome"=>"toy"}
+  Rendering filme/filtro_produtoras.js.erb
+  Rendered filme/_lista_produtoras.html.erb (Duration: 0.1ms | Allocations: 81)
+  Rendered filme/filtro_produtoras.js.erb (Duration: 0.6ms | Allocations: 340)
+Completed 200 OK in 31ms (Views: 1.3ms | ActiveRecord: 0.0ms | Allocations: 2951)
+
+
+Started GET "/filmes_locais" for ::1 at 2021-07-01 05:18:35 -0300
+Processing by FilmeController#filmes_locais as JS
+  Rendering filme/filmes_locais.js.erb
+  Rendered filme/_flash.html.erb (Duration: 0.1ms | Allocations: 57)
+  [1m[36mFilme Load (0.2ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" LIMIT ?[0m  [["LIMIT", 20]]
+  ↳ app/views/filme/_lista_filmes_locais.html.erb:7
+  Rendered filme/_lista_filmes_locais.html.erb (Duration: 2.4ms | Allocations: 1462)
+  Rendered filme/filmes_locais.js.erb (Duration: 3.3ms | Allocations: 2456)
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.2ms | Allocations: 3429)
+
+
+Started GET "/produtoras/toy" for ::1 at 2021-07-01 05:18:35 -0300
+Processing by FilmeController#filtro_produtoras as JS
+  Parameters: {"nome"=>"toy"}
+  Rendering filme/filtro_produtoras.js.erb
+  Rendered filme/_lista_produtoras.html.erb (Duration: 0.2ms | Allocations: 81)
+  Rendered filme/filtro_produtoras.js.erb (Duration: 0.5ms | Allocations: 340)
+Completed 200 OK in 33ms (Views: 1.5ms | ActiveRecord: 0.0ms | Allocations: 2989)
+
+
+Started GET "/palavras_chave/toy" for ::1 at 2021-07-01 05:18:35 -0300
+Processing by FilmeController#filtro_palavras_chave as JS
+  Parameters: {"nome"=>"toy"}
+  Rendering filme/filtro_palavras_chave.js.erb
+  Rendered filme/_lista_palavras_chave.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered filme/filtro_palavras_chave.js.erb (Duration: 0.5ms | Allocations: 277)
+Completed 200 OK in 33ms (Views: 1.3ms | ActiveRecord: 0.0ms | Allocations: 2849)
+
+
+Started GET "/coletaneas/toy" for ::1 at 2021-07-01 05:18:36 -0300
+Processing by FilmeController#filtro_coletanea as JS
+  Parameters: {"nome"=>"toy"}
+  Rendering filme/filtro_coletanea.js.erb
+  Rendered filme/_lista_coletaneas.html.erb (Duration: 0.1ms | Allocations: 90)
+  Rendered filme/filtro_coletanea.js.erb (Duration: 0.5ms | Allocations: 420)
+Completed 200 OK in 32ms (Views: 1.1ms | ActiveRecord: 0.0ms | Allocations: 2960)
+
+
+Started GET "/pessoas/toy" for ::1 at 2021-07-01 05:18:36 -0300
+Processing by FilmeController#filtro_pessoa as JS
+  Parameters: {"nome"=>"toy"}
+  Rendering filme/filtro_pessoa.js.erb
+  Rendered filme/_lista_pessoas.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered filme/filtro_pessoa.js.erb (Duration: 0.5ms | Allocations: 276)
+Completed 200 OK in 34ms (Views: 1.1ms | ActiveRecord: 0.0ms | Allocations: 3746)
+
+
+Started GET "/series/toy" for ::1 at 2021-07-01 05:18:37 -0300
+Processing by FilmeController#filtro_serie as JS
+  Parameters: {"nome"=>"toy"}
+  Rendering filme/filtro_serie.js.erb
+  Rendered filme/_lista_series.html.erb (Duration: 0.4ms | Allocations: 226)
+  Rendered filme/filtro_serie.js.erb (Duration: 1.9ms | Allocations: 1216)
+Completed 200 OK in 46ms (Views: 2.6ms | ActiveRecord: 0.0ms | Allocations: 3985)
+
+
+Started GET "/filmes/toy" for ::1 at 2021-07-01 05:18:37 -0300
+Processing by FilmeController#filtro_filme as JS
+  Parameters: {"nome"=>"toy"}
+  Rendering filme/filtro_filme.js.erb
+  Rendered filme/_lista_filmes.html.erb (Duration: 0.4ms | Allocations: 272)
+  Rendered filme/filtro_filme.js.erb (Duration: 1.6ms | Allocations: 1262)
+Completed 200 OK in 32ms (Views: 2.2ms | ActiveRecord: 0.0ms | Allocations: 4051)
+
+
+Started GET "/pessoas/toy" for ::1 at 2021-07-01 05:18:38 -0300
+Processing by FilmeController#filtro_pessoa as JS
+  Parameters: {"nome"=>"toy"}
+  Rendering filme/filtro_pessoa.js.erb
+  Rendered filme/_lista_pessoas.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered filme/filtro_pessoa.js.erb (Duration: 0.4ms | Allocations: 276)
+Completed 200 OK in 34ms (Views: 1.2ms | ActiveRecord: 0.0ms | Allocations: 3764)
+
+
+Started GET "/series/toy" for ::1 at 2021-07-01 05:18:38 -0300
+Processing by FilmeController#filtro_serie as JS
+  Parameters: {"nome"=>"toy"}
+  Rendering filme/filtro_serie.js.erb
+  Rendered filme/_lista_series.html.erb (Duration: 0.4ms | Allocations: 226)
+  Rendered filme/filtro_serie.js.erb (Duration: 1.5ms | Allocations: 1216)
+Completed 200 OK in 33ms (Views: 2.2ms | ActiveRecord: 0.0ms | Allocations: 3969)
+
+
+Started GET "/filmes/toy" for ::1 at 2021-07-01 05:18:39 -0300
+Processing by FilmeController#filtro_filme as JS
+  Parameters: {"nome"=>"toy"}
+  Rendering filme/filtro_filme.js.erb
+  Rendered filme/_lista_filmes.html.erb (Duration: 0.3ms | Allocations: 272)
+  Rendered filme/filtro_filme.js.erb (Duration: 1.5ms | Allocations: 1262)
+Completed 200 OK in 39ms (Views: 2.2ms | ActiveRecord: 0.0ms | Allocations: 4031)
+
+
+Started GET "/detalhes/filme/862" for ::1 at 2021-07-01 05:18:39 -0300
+Processing by FilmeController#detalhes_filme as HTML
+  Parameters: {"id"=>"862"}
+  Rendering layout layouts/application.html.erb
+  Rendering filme/detalhes_filme.html.erb within layouts/application
+  Rendered filme/detalhes_filme.html.erb within layouts/application (Duration: 1.2ms | Allocations: 496)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 3421)
+Completed 200 OK in 180ms (Views: 6.0ms | ActiveRecord: 0.0ms | Allocations: 6170)
+
+
+Started GET "/" for ::1 at 2021-07-01 05:19:09 -0300
+Processing by FilmeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering filme/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered filme/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 2103)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 5267)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.0ms | Allocations: 6309)
+
+
+Started GET "/" for ::1 at 2021-07-01 05:19:32 -0300
+Processing by FilmeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering filme/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered filme/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 2106)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 5281)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.0ms | Allocations: 6373)
+
+
+Started GET "/" for ::1 at 2021-07-01 05:20:28 -0300
+Processing by FilmeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering filme/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered filme/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 2105)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 5269)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.0ms | Allocations: 6359)
+
+
+Started POST "/filme/buscar_filme" for ::1 at 2021-07-01 05:20:33 -0300
+Processing by FilmeController#buscar_filme as JS
+  Parameters: {"authenticity_token"=>"[FILTERED]", "nome"=>"avengers"}
+  [1m[36mFilme Load (0.2ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 299534], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 299536], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 24428], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 99861], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 323660], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 9320], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 14611], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.0ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 14609], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.0ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 14613], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.0ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 448366], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 347158], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.0ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 521720], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.0ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 448368], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.0ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 368304], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.0ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 487555], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.0ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 538153], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.0ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 223291], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.0ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 432413], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.0ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 58906], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.0ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 416101], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  Rendering filme/buscar_filme.js.erb
+  Rendered filme/_lista_filmes.html.erb (Duration: 0.4ms | Allocations: 491)
+  Rendered filme/_sidebar.html.erb (Duration: 0.5ms | Allocations: 399)
+  Rendered filme/buscar_filme.js.erb (Duration: 2.3ms | Allocations: 2459)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/filme_controller.rb:160:in `salva_historico'
+  [1m[36mHistoricoBusca Create (0.7ms)[0m  [1m[32mINSERT INTO "historico_buscas" ("termo_pesquisa", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["termo_pesquisa", "avengers"], ["created_at", "2021-07-01 08:20:33.690451"], ["updated_at", "2021-07-01 08:20:33.690451"]]
+  ↳ app/controllers/filme_controller.rb:160:in `salva_historico'
+  [1m[36mTRANSACTION (118.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/filme_controller.rb:160:in `salva_historico'
+Completed 200 OK in 369ms (Views: 3.2ms | ActiveRecord: 120.2ms | Allocations: 29212)
+
+
+Started GET "/filmes/avengers" for ::1 at 2021-07-01 05:20:35 -0300
+Processing by FilmeController#filtro_filme as JS
+  Parameters: {"nome"=>"avengers"}
+  Rendering filme/filtro_filme.js.erb
+  Rendered filme/_lista_filmes.html.erb (Duration: 0.3ms | Allocations: 282)
+  Rendered filme/filtro_filme.js.erb (Duration: 1.6ms | Allocations: 1360)
+Completed 200 OK in 39ms (Views: 2.2ms | ActiveRecord: 0.0ms | Allocations: 4260)
+
+
+Started GET "/series/avengers" for ::1 at 2021-07-01 05:20:35 -0300
+Processing by FilmeController#filtro_serie as JS
+  Parameters: {"nome"=>"avengers"}
+  Rendering filme/filtro_serie.js.erb
+  Rendered filme/_lista_series.html.erb (Duration: 0.4ms | Allocations: 355)
+  Rendered filme/filtro_serie.js.erb (Duration: 1.6ms | Allocations: 1168)
+Completed 200 OK in 34ms (Views: 2.2ms | ActiveRecord: 0.0ms | Allocations: 3878)
+
+
+Started GET "/pessoas/avengers" for ::1 at 2021-07-01 05:20:36 -0300
+Processing by FilmeController#filtro_pessoa as JS
+  Parameters: {"nome"=>"avengers"}
+  Rendering filme/filtro_pessoa.js.erb
+  Rendered filme/_lista_pessoas.html.erb (Duration: 0.3ms | Allocations: 173)
+  Rendered filme/filtro_pessoa.js.erb (Duration: 1.0ms | Allocations: 507)
+Completed 200 OK in 34ms (Views: 1.6ms | ActiveRecord: 0.0ms | Allocations: 2899)
+
+
+Started GET "/coletaneas/avengers" for ::1 at 2021-07-01 05:20:36 -0300
+Processing by FilmeController#filtro_coletanea as JS
+  Parameters: {"nome"=>"avengers"}
+  Rendering filme/filtro_coletanea.js.erb
+  Rendered filme/_lista_coletaneas.html.erb (Duration: 0.6ms | Allocations: 302)
+  Rendered filme/filtro_coletanea.js.erb (Duration: 2.0ms | Allocations: 851)
+Completed 200 OK in 49ms (Views: 2.7ms | ActiveRecord: 0.0ms | Allocations: 3568)
+
+
+Started GET "/palavras_chave/avengers" for ::1 at 2021-07-01 05:20:37 -0300
+Processing by FilmeController#filtro_palavras_chave as JS
+  Parameters: {"nome"=>"avengers"}
+  Rendering filme/filtro_palavras_chave.js.erb
+  Rendered filme/_lista_palavras_chave.html.erb (Duration: 0.3ms | Allocations: 176)
+  Rendered filme/filtro_palavras_chave.js.erb (Duration: 1.0ms | Allocations: 520)
+Completed 200 OK in 32ms (Views: 1.9ms | ActiveRecord: 0.0ms | Allocations: 3042)
+
+
+Started GET "/produtoras/avengers" for ::1 at 2021-07-01 05:20:38 -0300
+Processing by FilmeController#filtro_produtoras as JS
+  Parameters: {"nome"=>"avengers"}
+  Rendering filme/filtro_produtoras.js.erb
+  Rendered filme/_lista_produtoras.html.erb (Duration: 0.3ms | Allocations: 189)
+  Rendered filme/filtro_produtoras.js.erb (Duration: 1.1ms | Allocations: 525)
+Completed 200 OK in 32ms (Views: 1.6ms | ActiveRecord: 0.0ms | Allocations: 3040)
+
+
+Started GET "/filmes_locais" for ::1 at 2021-07-01 05:20:38 -0300
+Processing by FilmeController#filmes_locais as JS
+  Rendering filme/filmes_locais.js.erb
+  Rendered filme/_flash.html.erb (Duration: 0.4ms | Allocations: 213)
+  [1m[36mFilme Load (0.2ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" LIMIT ?[0m  [["LIMIT", 20]]
+  ↳ app/views/filme/_lista_filmes_locais.html.erb:7
+  Rendered filme/_lista_filmes_locais.html.erb (Duration: 3.5ms | Allocations: 1988)
+  Rendered filme/filmes_locais.js.erb (Duration: 4.7ms | Allocations: 3197)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.2ms | Allocations: 4297)
+
+
+Started GET "/filme/mostrar_historico" for ::1 at 2021-07-01 05:20:39 -0300
+Processing by FilmeController#mostrar_historico as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering filme/mostrar_historico.html.erb within layouts/application
+  [1m[36mHistoricoBusca Load (0.1ms)[0m  [1m[34mSELECT "historico_buscas".* FROM "historico_buscas"[0m
+  ↳ app/views/filme/mostrar_historico.html.erb:7
+  Rendered filme/mostrar_historico.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1237)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 4808)
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.1ms | Allocations: 5382)
+
+
+Started GET "/filmes/avengers" for ::1 at 2021-07-01 05:20:43 -0300
+Processing by FilmeController#filtro_filme as JS
+  Parameters: {"nome"=>"avengers"}
+  Rendering filme/filtro_filme.js.erb
+  Rendered filme/_lista_filmes.html.erb (Duration: 0.4ms | Allocations: 282)
+  Rendered filme/filtro_filme.js.erb (Duration: 1.6ms | Allocations: 1272)
+Completed 200 OK in 35ms (Views: 2.6ms | ActiveRecord: 0.0ms | Allocations: 4056)
+
+
+Started GET "/detalhes/filme/299534" for ::1 at 2021-07-01 05:20:45 -0300
+Processing by FilmeController#detalhes_filme as HTML
+  Parameters: {"id"=>"299534"}
+  Rendering layout layouts/application.html.erb
+  Rendering filme/detalhes_filme.html.erb within layouts/application
+  Rendered filme/detalhes_filme.html.erb within layouts/application (Duration: 1.0ms | Allocations: 465)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 3379)
+Completed 200 OK in 37ms (Views: 6.2ms | ActiveRecord: 0.0ms | Allocations: 6178)
+
+
+Started GET "/series/avengers" for ::1 at 2021-07-01 05:20:47 -0300
+Processing by FilmeController#filtro_serie as JS
+  Parameters: {"nome"=>"avengers"}
+  Rendering filme/filtro_serie.js.erb
+  Rendered filme/_lista_series.html.erb (Duration: 0.2ms | Allocations: 148)
+  Rendered filme/filtro_serie.js.erb (Duration: 0.9ms | Allocations: 744)
+Completed 200 OK in 44ms (Views: 1.5ms | ActiveRecord: 0.0ms | Allocations: 3323)
+
+
+Started GET "/produtoras/avengers" for ::1 at 2021-07-01 05:20:49 -0300
+Processing by FilmeController#filtro_produtoras as JS
+  Parameters: {"nome"=>"avengers"}
+  Rendering filme/filtro_produtoras.js.erb
+  Rendered filme/_lista_produtoras.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered filme/filtro_produtoras.js.erb (Duration: 0.3ms | Allocations: 158)
+Completed 200 OK in 32ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 2548)
+
+
+Started GET "/filmes_locais" for ::1 at 2021-07-01 05:20:50 -0300
+Processing by FilmeController#filmes_locais as JS
+  Rendering filme/filmes_locais.js.erb
+  Rendered filme/_flash.html.erb (Duration: 0.1ms | Allocations: 56)
+  [1m[36mFilme Load (0.2ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" LIMIT ?[0m  [["LIMIT", 20]]
+  ↳ app/views/filme/_lista_filmes_locais.html.erb:7
+  Rendered filme/_lista_filmes_locais.html.erb (Duration: 3.0ms | Allocations: 1453)
+  Rendered filme/filmes_locais.js.erb (Duration: 3.9ms | Allocations: 2447)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.2ms | Allocations: 3417)
+
+
+Started GET "/detalhes/filmes_locais/5" for ::1 at 2021-07-01 05:20:50 -0300
+Processing by FilmeController#detalhes_filmes_locais as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mFilme Load (0.2ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/filme_controller.rb:98:in `detalhes_filmes_locais'
+  Rendering layout layouts/application.html.erb
+  Rendering filme/detalhes_filmes_locais.html.erb within layouts/application
+  Rendered filme/_flash.html.erb (Duration: 0.1ms | Allocations: 56)
+  Rendered filme/detalhes_filmes_locais.html.erb within layouts/application (Duration: 1.9ms | Allocations: 786)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 4340)
+Completed 200 OK in 9ms (Views: 6.0ms | ActiveRecord: 0.2ms | Allocations: 5595)
+
+
+Started GET "/detalhes/filmes_locais/21" for ::1 at 2021-07-01 05:21:06 -0300
+Processing by FilmeController#detalhes_filmes_locais as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/filme_controller.rb:98:in `detalhes_filmes_locais'
+  Rendering layout layouts/application.html.erb
+  Rendering filme/detalhes_filmes_locais.html.erb within layouts/application
+  Rendered filme/_flash.html.erb (Duration: 0.1ms | Allocations: 56)
+  Rendered filme/detalhes_filmes_locais.html.erb within layouts/application (Duration: 0.5ms | Allocations: 325)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 3312)
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 0.1ms | Allocations: 4289)
+
+
+Started GET "/" for ::1 at 2021-07-01 05:23:53 -0300
+Processing by FilmeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering filme/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered filme/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2109)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 5273)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.0ms | Allocations: 6314)
+
+
+Started GET "/" for ::1 at 2021-07-01 05:23:56 -0300
+Processing by FilmeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering filme/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered filme/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 2293)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 5172)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 5654)
+
+
+Started POST "/filme/buscar_filme" for ::1 at 2021-07-01 05:23:58 -0300
+Processing by FilmeController#buscar_filme as JS
+  Parameters: {"authenticity_token"=>"[FILTERED]", "nome"=>"avengers"}
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 299534], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 299536], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.0ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 24428], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 99861], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 323660], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.0ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 9320], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 14611], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 14609], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 14613], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.0ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 448366], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.0ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 347158], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.0ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 521720], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.0ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 448368], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.0ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 368304], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.0ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 487555], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.0ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 538153], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.0ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 223291], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.0ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 432413], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.0ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 58906], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.0ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 416101], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  Rendering filme/buscar_filme.js.erb
+  Rendered filme/_lista_filmes.html.erb (Duration: 0.4ms | Allocations: 491)
+  Rendered filme/_sidebar.html.erb (Duration: 0.5ms | Allocations: 399)
+  Rendered filme/buscar_filme.js.erb (Duration: 2.3ms | Allocations: 2459)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/filme_controller.rb:160:in `salva_historico'
+  [1m[36mHistoricoBusca Create (0.2ms)[0m  [1m[32mINSERT INTO "historico_buscas" ("termo_pesquisa", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["termo_pesquisa", "avengers"], ["created_at", "2021-07-01 08:23:58.709231"], ["updated_at", "2021-07-01 08:23:58.709231"]]
+  ↳ app/controllers/filme_controller.rb:160:in `salva_historico'
+  [1m[36mTRANSACTION (174.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/filme_controller.rb:160:in `salva_historico'
+Completed 200 OK in 814ms (Views: 3.6ms | ActiveRecord: 176.1ms | Allocations: 28958)
+
+
+Started GET "/filme/mostrar_historico" for ::1 at 2021-07-01 05:24:00 -0300
+Processing by FilmeController#mostrar_historico as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering filme/mostrar_historico.html.erb within layouts/application
+  [1m[36mHistoricoBusca Load (0.1ms)[0m  [1m[34mSELECT "historico_buscas".* FROM "historico_buscas"[0m
+  ↳ app/views/filme/mostrar_historico.html.erb:7
+  Rendered filme/mostrar_historico.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1296)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 4854)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.1ms | Allocations: 5427)
+
+
+Started GET "/filmes_locais" for ::1 at 2021-07-01 05:24:06 -0300
+Processing by FilmeController#filmes_locais as JS
+  Rendering filme/filmes_locais.js.erb
+  Rendered filme/_flash.html.erb (Duration: 0.2ms | Allocations: 213)
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" LIMIT ?[0m  [["LIMIT", 20]]
+  ↳ app/views/filme/_lista_filmes_locais.html.erb:7
+  Rendered filme/_lista_filmes_locais.html.erb (Duration: 2.2ms | Allocations: 1965)
+  Rendered filme/filmes_locais.js.erb (Duration: 3.6ms | Allocations: 3176)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.1ms | Allocations: 4280)
+
+
+Started GET "/detalhes/filmes_locais/5" for ::1 at 2021-07-01 05:24:07 -0300
+Processing by FilmeController#detalhes_filmes_locais as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/filme_controller.rb:98:in `detalhes_filmes_locais'
+  Rendering layout layouts/application.html.erb
+  Rendering filme/detalhes_filmes_locais.html.erb within layouts/application
+  Rendered filme/_flash.html.erb (Duration: 0.1ms | Allocations: 56)
+  Rendered filme/detalhes_filmes_locais.html.erb within layouts/application (Duration: 2.4ms | Allocations: 837)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 3924)
+Completed 200 OK in 9ms (Views: 5.9ms | ActiveRecord: 0.1ms | Allocations: 5467)
+
+
+Started GET "/filme/mostrar_historico" for ::1 at 2021-07-01 05:24:09 -0300
+Processing by FilmeController#mostrar_historico as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering filme/mostrar_historico.html.erb within layouts/application
+  [1m[36mHistoricoBusca Load (0.1ms)[0m  [1m[34mSELECT "historico_buscas".* FROM "historico_buscas"[0m
+  ↳ app/views/filme/mostrar_historico.html.erb:7
+  Rendered filme/mostrar_historico.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1124)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 4526)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.1ms | Allocations: 4994)
+
+
+Started GET "/produtoras/avengers" for ::1 at 2021-07-01 05:24:15 -0300
+Processing by FilmeController#filtro_produtoras as JS
+  Parameters: {"nome"=>"avengers"}
+  Rendering filme/filtro_produtoras.js.erb
+  Rendered filme/_lista_produtoras.html.erb (Duration: 0.4ms | Allocations: 189)
+  Rendered filme/filtro_produtoras.js.erb (Duration: 1.4ms | Allocations: 526)
+Completed 200 OK in 43ms (Views: 2.1ms | ActiveRecord: 0.0ms | Allocations: 3082)
+
+
+Started GET "/palavras_chave/avengers" for ::1 at 2021-07-01 05:24:16 -0300
+Processing by FilmeController#filtro_palavras_chave as JS
+  Parameters: {"nome"=>"avengers"}
+  Rendering filme/filtro_palavras_chave.js.erb
+  Rendered filme/_lista_palavras_chave.html.erb (Duration: 0.3ms | Allocations: 176)
+  Rendered filme/filtro_palavras_chave.js.erb (Duration: 1.2ms | Allocations: 519)
+Completed 200 OK in 32ms (Views: 1.9ms | ActiveRecord: 0.0ms | Allocations: 3062)
+
+
+Started GET "/coletaneas/avengers" for ::1 at 2021-07-01 05:24:17 -0300
+Processing by FilmeController#filtro_coletanea as JS
+  Parameters: {"nome"=>"avengers"}
+  Rendering filme/filtro_coletanea.js.erb
+  Rendered filme/_lista_coletaneas.html.erb (Duration: 0.4ms | Allocations: 302)
+  Rendered filme/filtro_coletanea.js.erb (Duration: 1.2ms | Allocations: 849)
+Completed 200 OK in 34ms (Views: 2.0ms | ActiveRecord: 0.0ms | Allocations: 3524)
+
+
+Started GET "/pessoas/avengers" for ::1 at 2021-07-01 05:24:17 -0300
+Processing by FilmeController#filtro_pessoa as JS
+  Parameters: {"nome"=>"avengers"}
+  Rendering filme/filtro_pessoa.js.erb
+  Rendered filme/_lista_pessoas.html.erb (Duration: 0.4ms | Allocations: 173)
+  Rendered filme/filtro_pessoa.js.erb (Duration: 1.0ms | Allocations: 507)
+Completed 200 OK in 31ms (Views: 1.6ms | ActiveRecord: 0.0ms | Allocations: 2902)
+
+
+Started GET "/series/avengers" for ::1 at 2021-07-01 05:24:18 -0300
+Processing by FilmeController#filtro_serie as JS
+  Parameters: {"nome"=>"avengers"}
+  Rendering filme/filtro_serie.js.erb
+  Rendered filme/_lista_series.html.erb (Duration: 0.5ms | Allocations: 355)
+  Rendered filme/filtro_serie.js.erb (Duration: 2.0ms | Allocations: 1168)
+Completed 200 OK in 37ms (Views: 2.6ms | ActiveRecord: 0.0ms | Allocations: 3900)
+
+
+Started GET "/filmes/avengers" for ::1 at 2021-07-01 05:24:18 -0300
+Processing by FilmeController#filtro_filme as JS
+  Parameters: {"nome"=>"avengers"}
+  Rendering filme/filtro_filme.js.erb
+  Rendered filme/_lista_filmes.html.erb (Duration: 0.4ms | Allocations: 282)
+  Rendered filme/filtro_filme.js.erb (Duration: 1.7ms | Allocations: 1360)
+Completed 200 OK in 36ms (Views: 2.3ms | ActiveRecord: 0.0ms | Allocations: 4258)
+
+
+Started GET "/pessoas/avengers" for ::1 at 2021-07-01 05:24:19 -0300
+Processing by FilmeController#filtro_pessoa as JS
+  Parameters: {"nome"=>"avengers"}
+  Rendering filme/filtro_pessoa.js.erb
+  Rendered filme/_lista_pessoas.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered filme/filtro_pessoa.js.erb (Duration: 0.3ms | Allocations: 156)
+Completed 200 OK in 34ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 2453)
+
+
+Started GET "/series/avengers" for ::1 at 2021-07-01 05:24:19 -0300
+Processing by FilmeController#filtro_serie as JS
+  Parameters: {"nome"=>"avengers"}
+  Rendering filme/filtro_serie.js.erb
+  Rendered filme/_lista_series.html.erb (Duration: 0.4ms | Allocations: 148)
+  Rendered filme/filtro_serie.js.erb (Duration: 1.1ms | Allocations: 744)
+Completed 200 OK in 31ms (Views: 1.7ms | ActiveRecord: 0.0ms | Allocations: 3326)
+
+
+Started GET "/pessoas/avengers" for ::1 at 2021-07-01 05:24:20 -0300
+Processing by FilmeController#filtro_pessoa as JS
+  Parameters: {"nome"=>"avengers"}
+  Rendering filme/filtro_pessoa.js.erb
+  Rendered filme/_lista_pessoas.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered filme/filtro_pessoa.js.erb (Duration: 0.3ms | Allocations: 156)
+Completed 200 OK in 37ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 2419)
+
+
+Started GET "/coletaneas/avengers" for ::1 at 2021-07-01 05:24:20 -0300
+Processing by FilmeController#filtro_coletanea as JS
+  Parameters: {"nome"=>"avengers"}
+  Rendering filme/filtro_coletanea.js.erb
+  Rendered filme/_lista_coletaneas.html.erb (Duration: 0.1ms | Allocations: 95)
+  Rendered filme/filtro_coletanea.js.erb (Duration: 0.5ms | Allocations: 425)
+Completed 200 OK in 36ms (Views: 1.1ms | ActiveRecord: 0.0ms | Allocations: 2974)
+
+
+Started GET "/palavras_chave/avengers" for ::1 at 2021-07-01 05:24:21 -0300
+Processing by FilmeController#filtro_palavras_chave as JS
+  Parameters: {"nome"=>"avengers"}
+  Rendering filme/filtro_palavras_chave.js.erb
+  Rendered filme/_lista_palavras_chave.html.erb (Duration: 0.1ms | Allocations: 41)
+  Rendered filme/filtro_palavras_chave.js.erb (Duration: 0.5ms | Allocations: 169)
+Completed 200 OK in 32ms (Views: 1.2ms | ActiveRecord: 0.0ms | Allocations: 2561)
+
+
+Started GET "/coletaneas/avengers" for ::1 at 2021-07-01 05:24:22 -0300
+Processing by FilmeController#filtro_coletanea as JS
+  Parameters: {"nome"=>"avengers"}
+  Rendering filme/filtro_coletanea.js.erb
+  Rendered filme/_lista_coletaneas.html.erb (Duration: 0.2ms | Allocations: 95)
+  Rendered filme/filtro_coletanea.js.erb (Duration: 0.7ms | Allocations: 425)
+Completed 200 OK in 33ms (Views: 1.4ms | ActiveRecord: 0.0ms | Allocations: 2969)
+
+
+Started GET "/palavras_chave/avengers" for ::1 at 2021-07-01 05:24:25 -0300
+Processing by FilmeController#filtro_palavras_chave as JS
+  Parameters: {"nome"=>"avengers"}
+  Rendering filme/filtro_palavras_chave.js.erb
+  Rendered filme/_lista_palavras_chave.html.erb (Duration: 0.1ms | Allocations: 41)
+  Rendered filme/filtro_palavras_chave.js.erb (Duration: 0.3ms | Allocations: 169)
+Completed 200 OK in 33ms (Views: 1.1ms | ActiveRecord: 0.0ms | Allocations: 2586)
+
+
+Started GET "/filmes/avengers" for ::1 at 2021-07-01 05:24:26 -0300
+Processing by FilmeController#filtro_filme as JS
+  Parameters: {"nome"=>"avengers"}
+  Rendering filme/filtro_filme.js.erb
+  Rendered filme/_lista_filmes.html.erb (Duration: 0.5ms | Allocations: 282)
+  Rendered filme/filtro_filme.js.erb (Duration: 1.8ms | Allocations: 1272)
+Completed 200 OK in 36ms (Views: 2.5ms | ActiveRecord: 0.0ms | Allocations: 4056)
+
+
+Started GET "/detalhes/filme/58906" for ::1 at 2021-07-01 05:26:08 -0300
+Processing by FilmeController#detalhes_filme as HTML
+  Parameters: {"id"=>"58906"}
+  Rendering layout layouts/application.html.erb
+  Rendering filme/detalhes_filme.html.erb within layouts/application
+  Rendered filme/detalhes_filme.html.erb within layouts/application (Duration: 1.1ms | Allocations: 590)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 3725)
+Completed 200 OK in 213ms (Views: 6.8ms | Allocations: 7306)
+
+
+Started GET "/detalhes/filme/14611" for ::1 at 2021-07-01 05:27:50 -0300
+Processing by FilmeController#detalhes_filme as HTML
+  Parameters: {"id"=>"14611"}
+  Rendering layout layouts/application.html.erb
+  Rendering filme/detalhes_filme.html.erb within layouts/application
+  Rendered filme/detalhes_filme.html.erb within layouts/application (Duration: 0.5ms | Allocations: 293)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 3417)
+Completed 200 OK in 50ms (Views: 4.8ms | Allocations: 6732)
+
+
+Started POST "/filme/create" for ::1 at 2021-07-01 05:27:51 -0300
+Processing by FilmeController#create as JS
+  Parameters: {"authenticity_token"=>"[FILTERED]", "filme"=>{"id_filme"=>"14611", "original_title"=>"Os Supremos 2 - Descubra o Poder da Pantera", "release_date"=>"2006-08-08", "overview"=>"Uma poderosa força alienígena está prestes a invadir a Terra. Ela está em busca de algo escondido na nação secreta de Wakanda, governada pelo príncipe T´Challa (Jeffrey D. Sams), também conhecido como Pantera Negra. Decidido a combater sua nação, ele pede a ajuda dos Supremos, um grupo formado por sete dos maiores super-heróis do planeta: Capitão América (Justin Gross), Hulk (Fred Tatasciore), Vespa (Grey DeLisle), Homem de Ferro (Marc Worden), Viúva Negra (Olivia d´Abo), Thor (David Boat) e Gigante (Nolan North).", "poster_path"=>"https://image.tmdb.org/t/p/w500/sMFyYZR9krqcQC99G6jnb10Zv4P.jpg"}, "submit"=>"Salvar no banco de dados"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/filme_controller.rb:102:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/filme_controller.rb:103:in `create'
+  [1m[36mFilme Create (0.3ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "poster_path", "release_date") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-07-01 08:27:51.236906"], ["updated_at", "2021-07-01 08:27:51.236906"], ["id_filme", 14611], ["original_title", "Os Supremos 2 - Descubra o Poder da Pantera"], ["overview", "Uma poderosa força alienígena está prestes a invadir a Terra. Ela está em busca de algo escondido na nação secreta de Wakanda, governada pelo príncipe T´Challa (Jeffrey D. Sams), também conhecido como Pantera Negra. Decidido a combater sua nação, ele pede a ajuda dos Supremos, um grupo formado por sete dos maiores super-heróis do planeta: Capitão América (Justin Gross), Hulk (Fred Tatasciore), Vespa (Grey DeLisle), Homem de Ferro (Marc Worden), Viúva Negra (Olivia d´Abo), Thor (David Boat) e Gigante (Nolan North)."], ["poster_path", "https://image.tmdb.org/t/p/w500/sMFyYZR9krqcQC99G6jnb10Zv4P.jpg"], ["release_date", "2006-08-08"]]
+  ↳ app/controllers/filme_controller.rb:103:in `create'
+  [1m[36mTRANSACTION (157.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/filme_controller.rb:103:in `create'
+  Rendering filme/create.js.erb
+  Rendered filme/_flash.html.erb (Duration: 0.1ms | Allocations: 66)
+  Rendered filme/create.js.erb (Duration: 0.7ms | Allocations: 293)
+Completed 200 OK in 179ms (Views: 8.6ms | ActiveRecord: 158.3ms | Allocations: 11100)
+
+
+Started GET "/filmes/avengers" for ::1 at 2021-07-01 05:27:57 -0300
+Processing by FilmeController#filtro_filme as JS
+  Parameters: {"nome"=>"avengers"}
+  Rendering filme/filtro_filme.js.erb
+  Rendered filme/_lista_filmes.html.erb (Duration: 0.4ms | Allocations: 283)
+  Rendered filme/filtro_filme.js.erb (Duration: 1.3ms | Allocations: 1275)
+Completed 200 OK in 44ms (Views: 1.9ms | ActiveRecord: 0.0ms | Allocations: 4271)
+
+
+Started GET "/series/avengers" for ::1 at 2021-07-01 05:27:58 -0300
+Processing by FilmeController#filtro_serie as JS
+  Parameters: {"nome"=>"avengers"}
+  Rendering filme/filtro_serie.js.erb
+  Rendered filme/_lista_series.html.erb (Duration: 0.4ms | Allocations: 149)
+  Rendered filme/filtro_serie.js.erb (Duration: 1.0ms | Allocations: 747)
+Completed 200 OK in 31ms (Views: 1.6ms | ActiveRecord: 0.0ms | Allocations: 3340)
+
+
+Started GET "/pessoas/avengers" for ::1 at 2021-07-01 05:27:58 -0300
+Processing by FilmeController#filtro_pessoa as JS
+  Parameters: {"nome"=>"avengers"}
+  Rendering filme/filtro_pessoa.js.erb
+  Rendered filme/_lista_pessoas.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered filme/filtro_pessoa.js.erb (Duration: 0.3ms | Allocations: 159)
+Completed 200 OK in 34ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 2437)
+
+
+Started GET "/filme/mostrar_historico" for ::1 at 2021-07-01 05:27:59 -0300
+Processing by FilmeController#mostrar_historico as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering filme/mostrar_historico.html.erb within layouts/application
+  [1m[36mHistoricoBusca Load (0.2ms)[0m  [1m[34mSELECT "historico_buscas".* FROM "historico_buscas"[0m
+  ↳ app/views/filme/mostrar_historico.html.erb:7
+  Rendered filme/mostrar_historico.html.erb within layouts/application (Duration: 6.3ms | Allocations: 3241)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.7ms | Allocations: 7165)
+Completed 200 OK in 14ms (Views: 11.5ms | ActiveRecord: 0.7ms | Allocations: 8032)
+
+
+Started GET "/filmes_locais" for ::1 at 2021-07-01 05:28:02 -0300
+Processing by FilmeController#filmes_locais as JS
+  Rendering filme/filmes_locais.js.erb
+  Rendered filme/_flash.html.erb (Duration: 0.1ms | Allocations: 68)
+  [1m[36mFilme Load (0.3ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" LIMIT ?[0m  [["LIMIT", 20]]
+  ↳ app/views/filme/_lista_filmes_locais.html.erb:7
+  Rendered filme/_lista_filmes_locais.html.erb (Duration: 3.2ms | Allocations: 1568)
+  Rendered filme/filmes_locais.js.erb (Duration: 4.7ms | Allocations: 2582)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.3ms | Allocations: 3637)
+
+
+Started GET "/detalhes/filmes_locais/3" for ::1 at 2021-07-01 05:28:03 -0300
+Processing by FilmeController#detalhes_filmes_locais as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mFilme Load (0.2ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/filme_controller.rb:98:in `detalhes_filmes_locais'
+  Rendering layout layouts/application.html.erb
+  Rendering filme/detalhes_filmes_locais.html.erb within layouts/application
+  Rendered filme/_flash.html.erb (Duration: 0.1ms | Allocations: 56)
+  Rendered filme/detalhes_filmes_locais.html.erb within layouts/application (Duration: 0.7ms | Allocations: 357)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 3900)
+Completed 200 OK in 9ms (Views: 6.1ms | ActiveRecord: 0.2ms | Allocations: 5055)
+
+
+Started DELETE "/excluir/3" for ::1 at 2021-07-01 05:28:05 -0300
+Processing by FilmeController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"3"}
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/filme_controller.rb:124:in `destroy'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/filme_controller.rb:125:in `destroy'
+  [1m[36mFilme Destroy (1.2ms)[0m  [1m[31mDELETE FROM "filmes" WHERE "filmes"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/filme_controller.rb:125:in `destroy'
+  [1m[36mTRANSACTION (229.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/filme_controller.rb:125:in `destroy'
+Redirected to http://localhost:3000/filmes_locais
+Completed 302 Found in 237ms (ActiveRecord: 230.4ms | Allocations: 4887)
+
+
+Started GET "/filmes_locais" for ::1 at 2021-07-01 05:28:05 -0300
+Processing by FilmeController#filmes_locais as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 327)
+
+
+Started GET "/" for ::1 at 2021-07-01 05:28:05 -0300
+Processing by FilmeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering filme/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered filme/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1723)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 4589)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms | Allocations: 5026)
+
+
+Started POST "/filme/buscar_filme" for ::1 at 2021-07-01 05:28:08 -0300
+Processing by FilmeController#buscar_filme as JS
+  Parameters: {"authenticity_token"=>"[FILTERED]", "nome"=>"avengers"}
+  [1m[36mFilme Load (0.3ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 299534], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 299536], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 24428], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Create (1.8ms)[0m  [1m[32mINSERT INTO "filmes" ("created_at", "updated_at", "id_filme", "original_title", "overview", "release_date") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2021-07-01 08:28:08.710538"], ["updated_at", "2021-07-01 08:28:08.710538"], ["id_filme", 24428], ["original_title", "The Avengers"], ["overview", "Loki, o irmão de Thor, ganha acesso ao poder ilimitado do cubo cósmico ao roubá-lo de dentro das instalações da S.H.I.E.L.D. Nick Fury, o diretor desta agência internacional que mantém a paz, logo reúne os únicos super-heróis que serão capazes de defender a Terra de ameaças sem precedentes. Homem de Ferro, Capitão América, Hulk, Thor, Viúva Negra e Gavião Arqueiro formam o time dos sonhos de Fury, mas eles precisam aprender a colocar os egos de lado e agir como um grupo em prol da humanidade."], ["release_date", "2012-04-25"]]
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mTRANSACTION (128.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/filme.rb:10:in `salvar_novos'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 99861], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 323660], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 9320], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 14611], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 14609], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 14613], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 448366], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 347158], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.0ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 521720], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.0ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 448368], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 368304], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.0ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 487555], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.0ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 538153], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.0ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 223291], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.0ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 432413], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.0ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 58906], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  [1m[36mFilme Load (0.1ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" WHERE "filmes"."id_filme" = ? LIMIT ?[0m  [["id_filme", 416101], ["LIMIT", 1]]
+  ↳ app/models/filme.rb:14:in `existe_no_banco?'
+  Rendering filme/buscar_filme.js.erb
+  Rendered filme/_lista_filmes.html.erb (Duration: 0.2ms | Allocations: 282)
+  Rendered filme/_sidebar.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered filme/buscar_filme.js.erb (Duration: 1.5ms | Allocations: 1583)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/filme_controller.rb:160:in `salva_historico'
+  [1m[36mHistoricoBusca Create (1.5ms)[0m  [1m[32mINSERT INTO "historico_buscas" ("termo_pesquisa", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["termo_pesquisa", "avengers"], ["created_at", "2021-07-01 08:28:08.868949"], ["updated_at", "2021-07-01 08:28:08.868949"]]
+  ↳ app/controllers/filme_controller.rb:160:in `salva_historico'
+  [1m[36mTRANSACTION (171.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/filme_controller.rb:160:in `salva_historico'
+Completed 200 OK in 542ms (Views: 2.0ms | ActiveRecord: 304.5ms | Allocations: 31946)
+
+
+Started GET "/filme/mostrar_historico" for ::1 at 2021-07-01 05:34:53 -0300
+Processing by FilmeController#mostrar_historico as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering filme/mostrar_historico.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/filme/mostrar_historico.html.erb:7
+  [1m[36mHistoricoBusca Load (0.1ms)[0m  [1m[34mSELECT "historico_buscas".* FROM "historico_buscas"[0m
+  ↳ app/views/filme/mostrar_historico.html.erb:7
+  Rendered filme/mostrar_historico.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1898)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 4898)
+Completed 200 OK in 8ms (Views: 7.7ms | ActiveRecord: 0.4ms | Allocations: 5351)
+
+
+Started GET "/filmes_locais" for ::1 at 2021-07-01 05:34:56 -0300
+Processing by FilmeController#filmes_locais as JS
+  Rendering filme/filmes_locais.js.erb
+  Rendered filme/_flash.html.erb (Duration: 0.1ms | Allocations: 61)
+  [1m[36mFilme Load (0.3ms)[0m  [1m[34mSELECT "filmes".* FROM "filmes" LIMIT ?[0m  [["LIMIT", 20]]
+  ↳ app/views/filme/_lista_filmes_locais.html.erb:7
+  Rendered filme/_lista_filmes_locais.html.erb (Duration: 2.9ms | Allocations: 1478)
+  Rendered filme/filmes_locais.js.erb (Duration: 4.4ms | Allocations: 2485)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.3ms | Allocations: 3469)
+
+
